@@ -1,0 +1,130 @@
+
+body {
+  	margin: 0;
+  	line-height: normal;
+}
+
+.mask-group-icon {
+  	position: absolute;
+  	top: 51px;
+  	left: 37px;
+  	width: 161px;
+  	height: 157px;
+  	object-fit: cover;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 20px;
+  	width: 107px;
+  	height: 102px;
+  	overflow: hidden;
+}
+.agenda {
+  	position: absolute;
+  	bottom: 0px;
+  	left: calc(50% - 43.5px);
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 97px;
+  	height: 31px;
+}
+.frame-parent {
+  	position: absolute;
+  	top: 348px;
+  	left: 37px;
+  	width: 107px;
+  	height: 133px;
+  	cursor: pointer;
+}
+.group-item {
+  	position: absolute;
+  	top: 0px;
+  	left: 2px;
+  	border-radius: 20px;
+  	width: 107px;
+  	height: 102px;
+  	overflow: hidden;
+}
+.progresso-e-conquistas {
+  	position: absolute;
+  	bottom: 0px;
+  	left: calc(50% - 65.5px);
+  	line-height: 20px;
+  	display: flex;
+  	align-items: center;
+  	width: 131px;
+  	height: 61px;
+}
+.frame-group {
+  	position: absolute;
+  	top: 520px;
+  	left: 35px;
+  	width: 131px;
+  	height: 157px;
+  	cursor: pointer;
+}
+.perfil {
+  	position: absolute;
+  	bottom: 0px;
+  	left: calc(50% - 23.5px);
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 72px;
+  	height: 33px;
+}
+.frame-container {
+  	position: absolute;
+  	top: 348px;
+  	left: 173px;
+  	width: 107px;
+  	height: 133px;
+  	cursor: pointer;
+}
+.senhas {
+  	position: absolute;
+  	bottom: 0px;
+  	left: calc(50% - 51.5px);
+  	line-height: 20px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 99px;
+  	height: 35px;
+}
+.group-div {
+  	position: absolute;
+  	top: 348px;
+  	left: 308px;
+  	width: 107px;
+  	height: 145px;
+  	cursor: pointer;
+  	text-align: center;
+}
+.maria-aparecida-da {
+  	position: absolute;
+  	top: 71px;
+  	left: 208px;
+  	font-size: 32px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 179px;
+  	height: 105px;
+}
+.index-familiar {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff8e1;
+  	height: 932px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 22px;
+  	color: #4a4a4a;
+  	font-family: Roboto;
+}
+

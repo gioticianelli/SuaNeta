@@ -1,0 +1,59 @@
+
+body {
+  	margin: 0;
+  	line-height: normal;
+}
+
+
+.splash3-child {
+  	position: absolute;
+  	top: calc(50% - 119px);
+  	left: calc(50% - 135px);
+  	border-radius: 60px;
+  	background-color: #e9a47c;
+  	width: 271px;
+  	height: 253px;
+  	overflow: hidden;
+}
+.imagem-do-whatsapp-de-2025-04- {
+  	position: absolute;
+  	top: 347px;
+  	left: 80px;
+  	border-radius: 60px;
+  	width: 271px;
+  	height: 271px;
+  	object-fit: cover;
+}
+.a-assistncia-que {
+  	position: absolute;
+  	top: 675px;
+  	left: 36px;
+  	line-height: 30px;
+  	font-weight: 800;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 359px;
+  	height: 92px;
+}
+.icon-park-outlinefamily {
+  	position: absolute;
+  	top: 454px;
+  	left: 203px;
+  	width: 24px;
+  	height: 24px;
+  	overflow: hidden;
+}
+.splash3 {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fefaf4;
+  	height: 932px;
+  	overflow: hidden;
+  	cursor: pointer;
+  	text-align: center;
+  	font-size: 36px;
+  	color: #f29985;
+  	font-family: 'Open Sans';
+}
+

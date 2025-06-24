@@ -1,0 +1,16 @@
+.vovo01- {
+  	width: 100%;
+  	position: relative;
+  	border-radius: 60px;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: cover;
+}
+
+
+body {
+  	margin: 0;
+  	line-height: normal;
+}
+

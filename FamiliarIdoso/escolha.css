@@ -1,0 +1,91 @@
+.escolha-uma-opo {
+  	position: absolute;
+  	top: 314px;
+  	left: 36px;
+  	font-size: 36px;
+  	line-height: 30px;
+  	display: flex;
+  	font-family: Roboto;
+  	color: #f96241;
+  	text-align: center;
+  	align-items: center;
+  	justify-content: center;
+  	width: 359px;
+  	height: 92px;
+}
+.familiar {
+  	position: absolute;
+  	bottom: 55px;
+  	left: calc(50% - 166px);
+  	line-height: 30px;
+  	font-weight: 800;
+}
+.group-icon {
+  	position: absolute;
+  	height: 72.31%;
+  	width: 29.02%;
+  	top: 13.85%;
+  	right: -0.05%;
+  	bottom: 13.85%;
+  	left: 71.04%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.familiar-parent {
+  	position: absolute;
+  	top: calc(50% - 70px);
+  	left: calc(50% - 186px);
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  	border-radius: 30px;
+  	background-color: rgba(40, 157, 253, 0.59);
+  	width: 366px;
+  	height: 130px;
+  	overflow: hidden;
+  	cursor: pointer;
+}
+.pessoal {
+  	position: absolute;
+  	bottom: 50px;
+  	left: calc(50% - 169px);
+  	line-height: 30px;
+  	font-weight: 800;
+}
+.material-symbolsperson-icon {
+  	position: absolute;
+  	top: calc(50% - 66px);
+  	right: 0px;
+  	width: 133px;
+  	height: 133px;
+  	overflow: hidden;
+}
+.pessoal-parent {
+  	position: absolute;
+  	top: calc(50% + 89px);
+  	left: calc(50% - 186px);
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  	border-radius: 30px;
+  	background-color: #e9a47c;
+  	width: 366px;
+  	height: 130px;
+  	overflow: hidden;
+  	cursor: pointer;
+}
+.splash2 {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fefaf4;
+  	height: 932px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 40px;
+  	color: #fff9f8;
+  	font-family: 'Open Sans';
+}
+
+
+body {
+  	margin: 0;
+  	line-height: normal;
+}
+
