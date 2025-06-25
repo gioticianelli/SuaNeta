@@ -1,0 +1,116 @@
+.subtract-icon {
+  	position: relative;
+  	width: 0px;
+  	height: 0px;
+}
+.remdio {
+  	position: absolute;
+  	top: calc(50% - 16.5px);
+  	left: calc(50% - 79px);
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.button-remdio {
+  	position: absolute;
+  	top: 298px;
+  	left: 32px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+  	border-radius: 20px;
+  	background-color: rgba(254, 60, 60, 0.89);
+  	width: 362px;
+  	height: 107px;
+  	overflow: hidden;
+  	cursor: pointer;
+}
+.evento {
+  	position: absolute;
+  	top: calc(50% - 16.5px);
+  	left: calc(50% - 61px);
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.button-evento {
+  	position: absolute;
+  	top: 464px;
+  	left: 32px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+  	border-radius: 20px;
+  	background-color: rgba(51, 108, 232, 0.67);
+  	width: 362px;
+  	height: 107px;
+  	overflow: hidden;
+  	cursor: pointer;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 50px;
+  	background-color: #ee5c3b;
+  	width: 98px;
+  	height: 44px;
+}
+.sos {
+  	position: absolute;
+  	top: 0px;
+  	left: 20px;
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 10px;
+  	left: 316px;
+  	width: 98px;
+  	height: 44px;
+  	cursor: pointer;
+  	font-size: 36px;
+  	color: #fff;
+}
+.agenda-opcao-child {
+  	position: absolute;
+  	top: 837px;
+  	left: 0px;
+  	background-color: rgba(255, 217, 157, 0.61);
+  	width: 431px;
+  	height: 95px;
+}
+.back-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 81.67%;
+  	bottom: 1.39%;
+  	left: 2.09%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: cover;
+  	cursor: pointer;
+}
+.home-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.2%;
+  	right: 5.8%;
+  	bottom: 1.29%;
+  	left: 77.96%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	cursor: pointer;
+}
+.agenda-opcao {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff8e1;
+  	height: 932px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 40px;
+  	color: #4a4a4a;
+  	font-family: Roboto;
+}
+

@@ -1,0 +1,306 @@
+.sos-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 50px;
+  	background-color: #ee5c3b;
+  	width: 98px;
+  	height: 29.9px;
+}
+.sos1 {
+  	position: absolute;
+  	top: 0px;
+  	left: 20px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 58px;
+  	height: 22.4px;
+}
+.sos {
+  	position: absolute;
+  	top: 10px;
+  	left: 316px;
+  	width: 98px;
+  	height: 29.9px;
+  	cursor: pointer;
+  	font-size: 36px;
+  	color: #fff;
+}
+.remedio-child {
+  	position: absolute;
+  	top: 837px;
+  	left: 0px;
+  	background-color: rgba(255, 217, 157, 0.61);
+  	width: 431px;
+  	height: 95px;
+}
+.back-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 81.67%;
+  	bottom: 1.39%;
+  	left: 2.09%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: cover;
+  	cursor: pointer;
+}
+.home-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 6.5%;
+  	bottom: 1.39%;
+  	left: 77.26%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	cursor: pointer;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 115px);
+  	border-radius: 100px;
+  	background-color: #f56b2e;
+  	width: 230px;
+  	height: 48px;
+}
+.salvar {
+  	position: absolute;
+  	top: calc(50% - 17px);
+  	left: calc(50% - 60px);
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 655px;
+  	left: calc(50% - 103.5px);
+  	width: 230px;
+  	height: 48px;
+  	cursor: pointer;
+  	font-size: 36px;
+  	color: #fff;
+}
+.nome-do-remdio {
+  	position: absolute;
+  	top: 0px;
+  	left: 3px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 32px;
+}
+.nome-do-remedio-child {
+  	position: absolute;
+  	top: 32px;
+  	left: 0px;
+  	border-radius: 10px;
+  	background-color: rgba(255, 206, 129, 0.7);
+  	width: 351px;
+  	height: 67px;
+}
+.dipirona {
+  	position: absolute;
+  	top: 49px;
+  	left: 20px;
+  	font-size: 32px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 32px;
+}
+.nome-do-remedio {
+  	position: absolute;
+  	top: 165px;
+  	left: 42px;
+  	width: 351px;
+  	height: 99px;
+}
+.div {
+  	position: absolute;
+  	top: 45px;
+  	left: 17px;
+  	font-size: 32px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 40px;
+}
+.dose {
+  	position: absolute;
+  	top: 268px;
+  	left: 45px;
+  	width: 351px;
+  	height: 99px;
+}
+.diariamente {
+  	position: absolute;
+  	top: 45px;
+  	left: 8px;
+  	font-size: 32px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 40px;
+}
+.frequencia {
+  	position: absolute;
+  	top: 371px;
+  	left: 45px;
+  	width: 351px;
+  	height: 99px;
+}
+.horrios-child {
+  	position: absolute;
+  	top: 32px;
+  	left: 0px;
+  	border-radius: 10px;
+  	background-color: rgba(255, 206, 129, 0.7);
+  	width: 134px;
+  	height: 40px;
+}
+.horrios {
+  	position: absolute;
+  	top: 474px;
+  	left: 48px;
+  	width: 238px;
+  	height: 72px;
+}
+.remdio {
+  	position: absolute;
+  	top: 107px;
+  	left: 44px;
+  	font-size: 40px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 178px;
+  	height: 32px;
+}
+.material-symbolspill-outline-icon {
+  	position: absolute;
+  	top: 94px;
+  	left: 220px;
+  	width: 47px;
+  	height: 47px;
+  	overflow: hidden;
+}
+.lembrete {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 32px;
+}
+.component-11-child {
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0%;
+  	right: 0%;
+  	bottom: 0%;
+  	left: 0%;
+  	border-radius: 15px;
+  	background-color: #666363;
+}
+.component-11-item {
+  	position: absolute;
+  	height: 86.67%;
+  	width: 52%;
+  	top: 6.67%;
+  	right: 48%;
+  	bottom: 6.67%;
+  	left: 0%;
+  	border-radius: 50%;
+  	background-color: #fff;
+}
+.component-11 {
+  	position: absolute;
+  	top: 1px;
+  	left: 298px;
+  	width: 50px;
+  	height: 30px;
+}
+.lembrete-parent {
+  	position: absolute;
+  	top: 572px;
+  	left: 45px;
+  	width: 348px;
+  	height: 32px;
+  	font-size: 32px;
+}
+.div1 {
+  	position: absolute;
+  	top: 509px;
+  	left: 58px;
+  	font-size: 32px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	text-align: center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 111px;
+}
+.horrios-item {
+  	position: absolute;
+  	top: 32px;
+  	left: 0px;
+  	border-radius: 10px;
+  	background-color: rgba(255, 206, 129, 0.7);
+  	width: 203px;
+  	height: 40px;
+}
+.horrios2 {
+  	position: absolute;
+  	top: 474px;
+  	left: 193px;
+  	width: 238px;
+  	height: 72px;
+}
+.div2 {
+  	position: absolute;
+  	top: 509px;
+  	left: 209px;
+  	font-size: 32px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	text-align: center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 175px;
+}
+.remedio {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff8e1;
+  	height: 932px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 24px;
+  	color: #4a4a4a;
+  	font-family: Roboto;
+}
+

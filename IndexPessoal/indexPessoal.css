@@ -1,0 +1,262 @@
+.mdimicrophone-icon {
+  	position: absolute;
+  	top: 5px;
+  	left: 313px;
+  	width: 75px;
+  	height: 75px;
+  	overflow: hidden;
+}
+.o-que-voc {
+  	position: absolute;
+  	bottom: 25px;
+  	left: calc(50% - 176px);
+  	font-weight: 600;
+}
+.mdimicrophone-parent {
+  	position: absolute;
+  	top: 239px;
+  	left: 19px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.49);
+  	border-radius: 20px;
+  	background-color: #fff8e1;
+  	border: 2.5px solid #f29985;
+  	box-sizing: border-box;
+  	width: 398px;
+  	height: 84px;
+  	overflow: hidden;
+  	color: #4a4a4a;
+  	font-family: 'Open Sans';
+}
+.sua {
+  	margin: 0;
+}
+.sua-neta-txt-container {
+  	width: 100%;
+}
+.sua-neta {
+  	position: absolute;
+  	top: 66px;
+  	left: 225px;
+  	font-size: 40px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 97px;
+  	height: 105px;
+}
+.mask-group-icon {
+  	position: absolute;
+  	top: 40.17px;
+  	left: 53.5px;
+  	width: 161px;
+  	height: 157px;
+  	object-fit: cover;
+}
+.phcalendar-icon {
+  	position: absolute;
+  	top: 6px;
+  	left: calc(50% - 47.5px);
+  	width: 96px;
+  	height: 96px;
+  	overflow: hidden;
+}
+.agenda {
+  	position: absolute;
+  	bottom: 22px;
+  	left: calc(50% - 41.5px);
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 97px;
+  	height: 31px;
+}
+.phcalendar-parent {
+  	position: absolute;
+  	top: 348px;
+  	left: 37px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+  	border-radius: 20px;
+  	background-color: rgba(255, 217, 157, 0.65);
+  	width: 159px;
+  	height: 164px;
+  	overflow: hidden;
+  	cursor: pointer;
+}
+.aplicativos {
+  	position: absolute;
+  	bottom: 19px;
+  	left: calc(50% - 57.5px);
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 181px;
+  	height: 33px;
+}
+.material-symbolsapps-icon {
+  	position: absolute;
+  	top: 4px;
+  	left: 22px;
+  	width: 108px;
+  	height: 108px;
+  	overflow: hidden;
+}
+.aplicativos-parent {
+  	position: absolute;
+  	top: 520px;
+  	left: 37px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+  	border-radius: 20px;
+  	background-color: rgba(255, 217, 157, 0.65);
+  	width: 159px;
+  	height: 164px;
+  	overflow: hidden;
+  	cursor: pointer;
+}
+.perfil {
+  	position: absolute;
+  	bottom: 19px;
+  	left: calc(50% - 36.5px);
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 72px;
+  	height: 33px;
+}
+.material-symbolsperson-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: calc(50% - 66.5px);
+  	width: 119px;
+  	height: 119px;
+  	overflow: hidden;
+}
+.perfil-parent {
+  	position: absolute;
+  	top: 709px;
+  	left: 34px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+  	border-radius: 20px;
+  	background-color: rgba(255, 217, 157, 0.65);
+  	width: 159px;
+  	height: 164px;
+  	overflow: hidden;
+  	cursor: pointer;
+}
+.mingcutelock-line-icon {
+  	position: absolute;
+  	top: 5px;
+  	left: calc(50% - 45.5px);
+  	width: 91px;
+  	height: 91px;
+  	overflow: hidden;
+}
+.senhas {
+  	position: absolute;
+  	bottom: 15px;
+  	left: calc(50% - 48.5px);
+  	line-height: 20px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 99px;
+  	height: 35px;
+}
+.mingcutelock-line-parent {
+  	position: absolute;
+  	top: 520px;
+  	left: 245px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+  	border-radius: 20px;
+  	background-color: rgba(255, 217, 157, 0.61);
+  	width: 159px;
+  	height: 164px;
+  	overflow: hidden;
+  	cursor: pointer;
+  	text-align: center;
+}
+.icon-park-outlinepeoples {
+  	position: absolute;
+  	top: 8px;
+  	left: calc(50% - 42.5px);
+  	width: 88px;
+  	height: 88px;
+  	overflow: hidden;
+}
+.controle-familiar-txt-container {
+  	line-break: anywhere;
+  	width: 100%;
+}
+.controle-familiar {
+  	position: absolute;
+  	bottom: 13px;
+  	left: calc(50% - 49.5px);
+  	line-height: 20px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 103px;
+  	height: 47px;
+}
+.icon-park-outlinepeoples-parent {
+  	position: absolute;
+  	top: 348px;
+  	left: 243px;
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+  	border-radius: 20px;
+  	background-color: rgba(255, 217, 157, 0.61);
+  	width: 159px;
+  	height: 164px;
+  	overflow: hidden;
+  	cursor: pointer;
+  	text-align: center;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 50px;
+  	background-color: #ee5c3b;
+  	width: 98px;
+  	height: 44px;
+}
+.sos {
+  	position: absolute;
+  	top: 0px;
+  	left: 20px;
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 10px;
+  	left: 300px;
+  	width: 98px;
+  	height: 44px;
+  	cursor: pointer;
+  	font-size: 36px;
+  	color: #fff;
+}
+.index-pessoal {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fefaf4;
+  	height: 932px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 24px;
+  	color: #000;
+  	font-family: Roboto;
+}
+
+
+body {
+  	margin: 0;
+  	line-height: normal;
+}
+

@@ -1,0 +1,728 @@
+.logo-caixa-41262-1-icon {
+  	position: absolute;
+  	top: 439px;
+  	left: -273px;
+  	width: 71px;
+  	height: 71px;
+  	object-fit: cover;
+}
+.perfil {
+  	position: absolute;
+  	top: 43px;
+  	left: 14px;
+  	font-size: 40px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 247px;
+  	height: 105px;
+}
+.perfil-familiar-child {
+  	position: absolute;
+  	top: 837px;
+  	left: 0px;
+  	background-color: rgba(255, 217, 157, 0.61);
+  	width: 431px;
+  	height: 95px;
+}
+.back-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 81.67%;
+  	bottom: 1.39%;
+  	left: 2.09%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: cover;
+  	cursor: pointer;
+}
+.home-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 6.03%;
+  	bottom: 1.39%;
+  	left: 77.73%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	cursor: pointer;
+}
+.neta {
+  	position: absolute;
+  	top: 208px;
+  	left: 165px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: rgba(74, 74, 74, 0.71);
+  	display: flex;
+  	align-items: center;
+  	width: 100px;
+  	height: 40px;
+}
+.instagram-post-amarelo-ilustra-icon {
+  	position: absolute;
+  	top: 146px;
+  	left: 6px;
+  	width: 148px;
+  	height: 153px;
+  	object-fit: cover;
+}
+.ana-clara-silva {
+  	position: absolute;
+  	top: 172px;
+  	left: 167px;
+  	font-size: 32px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 311px;
+  	height: 50px;
+}
+.perfil-familiar-item {
+  	position: absolute;
+  	top: 555px;
+  	left: 1px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 430px;
+  	height: 47px;
+}
+.alteraes-na-agenda {
+  	position: absolute;
+  	top: 569px;
+  	left: 8px;
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 28px;
+}
+.perfil-familiar-inner {
+  	position: absolute;
+  	top: 602px;
+  	left: 0px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 430px;
+  	height: 47px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 649px;
+  	left: 0px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 430px;
+  	height: 46px;
+}
+.perfil-familiar-child1 {
+  	position: absolute;
+  	top: 695px;
+  	left: 1px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 430px;
+  	height: 47px;
+}
+.perfil-familiar-child2 {
+  	position: absolute;
+  	top: 742px;
+  	left: 0px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 431px;
+  	height: 47px;
+}
+.component-10-child {
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0%;
+  	right: 0%;
+  	bottom: 0%;
+  	left: 0%;
+  	border-radius: 15px;
+  	background-color: #666363;
+}
+.component-10-item {
+  	position: absolute;
+  	height: 86.8%;
+  	width: 52%;
+  	top: 6.67%;
+  	right: 48%;
+  	bottom: 6.53%;
+  	left: 0%;
+  	border-radius: 50%;
+  	background-color: #fff;
+}
+.component-10 {
+  	position: absolute;
+  	top: 660px;
+  	left: 368px;
+  	width: 50px;
+  	height: 25px;
+}
+.component-11 {
+  	position: absolute;
+  	top: 705px;
+  	left: 368px;
+  	width: 50px;
+  	height: 25px;
+}
+.component-13 {
+  	position: absolute;
+  	top: 752px;
+  	left: 368px;
+  	width: 50px;
+  	height: 25px;
+}
+.notificaes-em-tempo {
+  	position: absolute;
+  	top: 615px;
+  	left: 8px;
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 333px;
+  	height: 28px;
+}
+.acesso-ao-perfil {
+  	position: absolute;
+  	top: 658px;
+  	left: 8px;
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 277px;
+  	height: 28px;
+}
+.acesso-ao-cofre {
+  	position: absolute;
+  	top: 705px;
+  	left: 8px;
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 291px;
+  	height: 28px;
+}
+.acesso-ao-progresso {
+  	position: absolute;
+  	top: 752px;
+  	left: 7px;
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 292px;
+  	height: 28px;
+}
+.component-12-item {
+  	position: absolute;
+  	height: 86.54%;
+  	width: 52%;
+  	top: 6.67%;
+  	right: 48%;
+  	bottom: 6.79%;
+  	left: 0%;
+  	border-radius: 50%;
+  	background-color: #fff;
+}
+.component-12 {
+  	position: absolute;
+  	top: 615px;
+  	left: 368px;
+  	width: 50px;
+  	height: 26px;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 15px;
+  	background-color: #666363;
+  	width: 50px;
+  	height: 26px;
+}
+.group-item {
+  	position: absolute;
+  	top: 2px;
+  	left: 0px;
+  	width: 26px;
+  	height: 23px;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 566px;
+  	left: 368px;
+  	width: 50px;
+  	height: 26px;
+  	cursor: pointer;
+}
+.group-inner {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	width: 429px;
+  	height: 116px;
+}
+.av {
+  	position: absolute;
+  	top: 43px;
+  	left: 117px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 68px;
+  	height: 26px;
+}
+.instagram-post-amarelo-ilustra-icon1 {
+  	position: absolute;
+  	top: 0px;
+  	left: 9px;
+  	width: 100px;
+  	height: 99px;
+  	object-fit: cover;
+}
+.maria-aparecida-da {
+  	position: absolute;
+  	top: 16px;
+  	left: 118px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 283px;
+  	height: 32px;
+}
+.rectangle-group {
+  	position: absolute;
+  	top: 371px;
+  	left: 0px;
+  	width: 429px;
+  	height: 116px;
+  	cursor: pointer;
+  	font-size: 20px;
+  	color: rgba(74, 74, 74, 0.71);
+}
+.seu-familiar {
+  	position: absolute;
+  	top: 332px;
+  	left: 20px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: rgba(0, 0, 0, 0.47);
+  	display: flex;
+  	align-items: center;
+  	width: 247px;
+  	height: 32px;
+}
+.suas-permies {
+  	position: absolute;
+  	top: 522px;
+  	left: 20px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: rgba(0, 0, 0, 0.47);
+  	display: flex;
+  	align-items: center;
+  	width: 247px;
+  	height: 32px;
+}
+.perfil-familiar {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff8e1;
+  	height: 932px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 22px;
+  	color: #4a4a4a;
+  	font-family: Roboto;
+}
+
+.logo-caixa-41262-1-icon {
+  	position: absolute;
+  	top: 439px;
+  	left: -273px;
+  	width: 71px;
+  	height: 71px;
+  	object-fit: cover;
+}
+.perfil {
+  	position: absolute;
+  	top: 43px;
+  	left: 14px;
+  	font-size: 40px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 247px;
+  	height: 105px;
+}
+.perfil-familiar-child {
+  	position: absolute;
+  	top: 837px;
+  	left: 0px;
+  	background-color: rgba(255, 217, 157, 0.61);
+  	width: 431px;
+  	height: 95px;
+}
+.back-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 81.67%;
+  	bottom: 1.39%;
+  	left: 2.09%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: cover;
+  	cursor: pointer;
+}
+.home-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 6.03%;
+  	bottom: 1.39%;
+  	left: 77.73%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	cursor: pointer;
+}
+.neta {
+  	position: absolute;
+  	top: 208px;
+  	left: 165px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: rgba(74, 74, 74, 0.71);
+  	display: flex;
+  	align-items: center;
+  	width: 100px;
+  	height: 40px;
+}
+.instagram-post-amarelo-ilustra-icon {
+  	position: absolute;
+  	top: 146px;
+  	left: 6px;
+  	width: 148px;
+  	height: 153px;
+  	object-fit: cover;
+}
+.ana-clara-silva {
+  	position: absolute;
+  	top: 172px;
+  	left: 167px;
+  	font-size: 32px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 311px;
+  	height: 50px;
+}
+.perfil-familiar-item {
+  	position: absolute;
+  	top: 555px;
+  	left: 1px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 430px;
+  	height: 47px;
+}
+.alteraes-na-agenda {
+  	position: absolute;
+  	top: 569px;
+  	left: 8px;
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 28px;
+}
+.perfil-familiar-inner {
+  	position: absolute;
+  	top: 602px;
+  	left: 0px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 430px;
+  	height: 47px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 649px;
+  	left: 0px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 430px;
+  	height: 46px;
+}
+.perfil-familiar-child1 {
+  	position: absolute;
+  	top: 695px;
+  	left: 1px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 430px;
+  	height: 47px;
+}
+.perfil-familiar-child2 {
+  	position: absolute;
+  	top: 742px;
+  	left: 0px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 431px;
+  	height: 47px;
+}
+.component-10-child {
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0%;
+  	right: 0%;
+  	bottom: 0%;
+  	left: 0%;
+  	border-radius: 15px;
+  	background-color: #666363;
+}
+.component-10-item {
+  	position: absolute;
+  	height: 86.8%;
+  	width: 52%;
+  	top: 6.67%;
+  	right: 48%;
+  	bottom: 6.53%;
+  	left: 0%;
+  	border-radius: 50%;
+  	background-color: #fff;
+}
+.component-10 {
+  	position: absolute;
+  	top: 660px;
+  	left: 368px;
+  	width: 50px;
+  	height: 25px;
+}
+.component-11 {
+  	position: absolute;
+  	top: 705px;
+  	left: 368px;
+  	width: 50px;
+  	height: 25px;
+}
+.component-13 {
+  	position: absolute;
+  	top: 752px;
+  	left: 368px;
+  	width: 50px;
+  	height: 25px;
+}
+.notificaes-em-tempo {
+  	position: absolute;
+  	top: 615px;
+  	left: 8px;
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 333px;
+  	height: 28px;
+}
+.acesso-ao-perfil {
+  	position: absolute;
+  	top: 658px;
+  	left: 8px;
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 277px;
+  	height: 28px;
+}
+.acesso-ao-cofre {
+  	position: absolute;
+  	top: 705px;
+  	left: 8px;
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 291px;
+  	height: 28px;
+}
+.acesso-ao-progresso {
+  	position: absolute;
+  	top: 752px;
+  	left: 7px;
+  	line-height: 33px;
+  	display: flex;
+  	align-items: center;
+  	width: 292px;
+  	height: 28px;
+}
+.component-12-item {
+  	position: absolute;
+  	height: 86.54%;
+  	width: 52%;
+  	top: 6.67%;
+  	right: 48%;
+  	bottom: 6.79%;
+  	left: 0%;
+  	border-radius: 50%;
+  	background-color: #fff;
+}
+.component-12 {
+  	position: absolute;
+  	top: 615px;
+  	left: 368px;
+  	width: 50px;
+  	height: 26px;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 15px;
+  	background-color: #666363;
+  	width: 50px;
+  	height: 26px;
+}
+.group-item {
+  	position: absolute;
+  	top: 2px;
+  	left: 0px;
+  	width: 26px;
+  	height: 23px;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 566px;
+  	left: 368px;
+  	width: 50px;
+  	height: 26px;
+  	cursor: pointer;
+}
+.group-inner {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	width: 429px;
+  	height: 116px;
+}
+.av {
+  	position: absolute;
+  	top: 43px;
+  	left: 117px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 68px;
+  	height: 26px;
+}
+.instagram-post-amarelo-ilustra-icon1 {
+  	position: absolute;
+  	top: 0px;
+  	left: 9px;
+  	width: 100px;
+  	height: 99px;
+  	object-fit: cover;
+}
+.maria-aparecida-da {
+  	position: absolute;
+  	top: 16px;
+  	left: 118px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 283px;
+  	height: 32px;
+}
+.rectangle-group {
+  	position: absolute;
+  	top: 371px;
+  	left: 0px;
+  	width: 429px;
+  	height: 116px;
+  	cursor: pointer;
+  	font-size: 20px;
+  	color: rgba(74, 74, 74, 0.71);
+}
+.seu-familiar {
+  	position: absolute;
+  	top: 332px;
+  	left: 20px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: rgba(0, 0, 0, 0.47);
+  	display: flex;
+  	align-items: center;
+  	width: 247px;
+  	height: 32px;
+}
+.suas-permies {
+  	position: absolute;
+  	top: 522px;
+  	left: 20px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: rgba(0, 0, 0, 0.47);
+  	display: flex;
+  	align-items: center;
+  	width: 247px;
+  	height: 32px;
+}
+.perfil-familiar {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff8e1;
+  	height: 932px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 22px;
+  	color: #4a4a4a;
+  	font-family: Roboto;
+}
+
+
+body {
+  	margin: 0;
+  	line-height: normal;
+}
+
