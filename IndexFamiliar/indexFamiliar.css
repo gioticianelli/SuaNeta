@@ -1,130 +1,235 @@
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+html,
 body {
-  	margin: 0;
-  	line-height: normal;
+    margin: 0px;
+    height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+    text-decoration: none;
 }
 
-.mask-group-icon {
-  	position: absolute;
-  	top: 51px;
-  	left: 37px;
-  	width: 161px;
-  	height: 157px;
-  	object-fit: cover;
-}
-.group-child {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	border-radius: 20px;
-  	width: 107px;
-  	height: 102px;
-  	overflow: hidden;
-}
-.agenda {
-  	position: absolute;
-  	bottom: 0px;
-  	left: calc(50% - 43.5px);
-  	line-height: 33px;
-  	display: flex;
-  	align-items: center;
-  	width: 97px;
-  	height: 31px;
-}
-.frame-parent {
-  	position: absolute;
-  	top: 348px;
-  	left: 37px;
-  	width: 107px;
-  	height: 133px;
-  	cursor: pointer;
-}
-.group-item {
-  	position: absolute;
-  	top: 0px;
-  	left: 2px;
-  	border-radius: 20px;
-  	width: 107px;
-  	height: 102px;
-  	overflow: hidden;
-}
-.progresso-e-conquistas {
-  	position: absolute;
-  	bottom: 0px;
-  	left: calc(50% - 65.5px);
-  	line-height: 20px;
-  	display: flex;
-  	align-items: center;
-  	width: 131px;
-  	height: 61px;
-}
-.frame-group {
-  	position: absolute;
-  	top: 520px;
-  	left: 35px;
-  	width: 131px;
-  	height: 157px;
-  	cursor: pointer;
-}
-.perfil {
-  	position: absolute;
-  	bottom: 0px;
-  	left: calc(50% - 23.5px);
-  	line-height: 33px;
-  	display: flex;
-  	align-items: center;
-  	width: 72px;
-  	height: 33px;
-}
-.frame-container {
-  	position: absolute;
-  	top: 348px;
-  	left: 173px;
-  	width: 107px;
-  	height: 133px;
-  	cursor: pointer;
-}
-.senhas {
-  	position: absolute;
-  	bottom: 0px;
-  	left: calc(50% - 51.5px);
-  	line-height: 20px;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 99px;
-  	height: 35px;
-}
-.group-div {
-  	position: absolute;
-  	top: 348px;
-  	left: 308px;
-  	width: 107px;
-  	height: 145px;
-  	cursor: pointer;
-  	text-align: center;
-}
-.maria-aparecida-da {
-  	position: absolute;
-  	top: 71px;
-  	left: 208px;
-  	font-size: 32px;
-  	line-height: 33px;
-  	font-weight: 600;
-  	display: flex;
-  	align-items: center;
-  	width: 179px;
-  	height: 105px;
-}
+
 .index-familiar {
-  	width: 100%;
-  	position: relative;
-  	background-color: #fff8e1;
-  	height: 932px;
-  	overflow: hidden;
-  	text-align: left;
-  	font-size: 22px;
-  	color: #4a4a4a;
-  	font-family: Roboto;
+    background-color: #fff8e1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
 }
 
+.index-familiar .div {
+    background-color: #fff8e1;
+    width: 430px;
+    height: 932px;
+    position: relative;
+}
+
+.index-familiar .mask-group {
+    position: absolute;
+    width: 161px;
+    height: 157px;
+    top: 51px;
+    left: 37px;
+}
+
+.index-familiar .group {
+    width: 109px;
+    height: 133px;
+    top: 348px;
+    left: 37px;
+    position: absolute;
+}
+
+.index-familiar .frame {
+    left: 0;
+    background-color: #ffd99ca6;
+    position: absolute;
+    width: 107px;
+    height: 102px;
+    top: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px #000000b2;
+}
+
+.index-familiar .ph-calendar {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    top: 15px;
+    left: 17px;
+}
+
+.index-familiar .text-wrapper {
+    position: absolute;
+    width: 97px;
+    height: 31px;
+    top: 102px;
+    left: 10px;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #4a4a4a;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 33px;
+    white-space: nowrap;
+}
+
+.index-familiar .overlap-group-wrapper {
+    width: 133px;
+    height: 157px;
+    top: 520px;
+    left: 35px;
+    position: absolute;
+}
+
+.index-familiar .overlap-group {
+    position: relative;
+    width: 131px;
+    height: 157px;
+}
+
+.index-familiar .material-symbols-wrapper {
+    left: 2px;
+    background-color: #ffd99ca6;
+    position: absolute;
+    width: 107px;
+    height: 102px;
+    top: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px #000000b2;
+}
+
+.index-familiar .material-symbols {
+    position: relative;
+    width: 108px;
+    height: 108px;
+    top: -3px;
+    left: -1px;
+}
+
+.index-familiar .tabler-progress {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    top: 21px;
+    left: 21px;
+}
+
+.index-familiar .text-wrapper-2 {
+    position: absolute;
+    width: 131px;
+    height: 61px;
+    top: 96px;
+    left: 0;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #4a4a4a;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.index-familiar .overlap-wrapper {
+    width: 109px;
+    height: 133px;
+    top: 348px;
+    left: 173px;
+    position: absolute;
+}
+
+.index-familiar .overlap {
+    position: relative;
+    width: 107px;
+    height: 133px;
+}
+
+.index-familiar .img {
+    position: absolute;
+    width: 93px;
+    height: 93px;
+    top: 0;
+    left: 7px;
+}
+
+.index-familiar .text-wrapper-3 {
+    position: absolute;
+    width: 72px;
+    height: 33px;
+    top: 100px;
+    left: 30px;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #4a4a4a;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 33px;
+    white-space: nowrap;
+}
+
+.index-familiar .group-2 {
+    width: 109px;
+    height: 145px;
+    top: 348px;
+    left: 308px;
+    position: absolute;
+}
+
+.index-familiar .mingcute-lock-line-wrapper {
+    left: 0;
+    background-color: #ffd99d9c;
+    position: absolute;
+    width: 107px;
+    height: 102px;
+    top: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px #000000b2;
+}
+
+.index-familiar .mingcute-lock-line {
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    top: 17px;
+    left: 19px;
+}
+
+.index-familiar .senhas {
+    position: absolute;
+    width: 99px;
+    height: 35px;
+    top: 110px;
+    left: 2px;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #4a4a4a;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.index-familiar .text-wrapper-4 {
+    position: absolute;
+    width: 179px;
+    height: 105px;
+    top: 70px;
+    left: 208px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #4a4a4a;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 33px;
+}

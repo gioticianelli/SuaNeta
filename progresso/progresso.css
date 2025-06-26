@@ -1,250 +1,348 @@
-.progresso-child {
-  	position: absolute;
-  	top: 227px;
-  	left: 0px;
-  	width: 429px;
-  	height: 61px;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
 }
-.logo-caixa-41262-1-icon {
-  	position: absolute;
-  	top: 439px;
-  	left: -273px;
-  	width: 71px;
-  	height: 71px;
-  	object-fit: cover;
+html,
+body {
+    margin: 0px;
+    height: 100%;
 }
-.progresso-e-conquistas {
-  	position: absolute;
-  	top: 43px;
-  	left: 14px;
-  	font-size: 40px;
-  	line-height: 33px;
-  	font-weight: 600;
-  	display: flex;
-  	align-items: center;
-  	width: 247px;
-  	height: 105px;
+/* a blue color as a generic focus style */
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
 }
-.progresso-item {
-  	position: absolute;
-  	top: 837px;
-  	left: 0px;
-  	background-color: rgba(255, 217, 157, 0.61);
-  	width: 431px;
-  	height: 95px;
-}
-.notificaes {
-  	position: absolute;
-  	top: 132px;
-  	left: 20px;
-  	line-height: 33px;
-  	font-weight: 600;
-  	color: rgba(74, 74, 74, 0.71);
-  	display: flex;
-  	align-items: center;
-  	width: 147px;
-  	height: 40px;
-}
-.back-icon {
-  	position: absolute;
-  	height: 7.51%;
-  	width: 16.24%;
-  	top: 91.09%;
-  	right: 81.67%;
-  	bottom: 1.39%;
-  	left: 2.09%;
-  	max-width: 100%;
-  	overflow: hidden;
-  	max-height: 100%;
-  	object-fit: cover;
-  	cursor: pointer;
-}
-.home-icon {
-  	position: absolute;
-  	height: 7.51%;
-  	width: 16.24%;
-  	top: 91.09%;
-  	right: 6.03%;
-  	bottom: 1.39%;
-  	left: 77.73%;
-  	max-width: 100%;
-  	overflow: hidden;
-  	max-height: 100%;
-  	cursor: pointer;
-}
-.adicionou-o-1 {
-  	position: absolute;
-  	top: 232px;
-  	left: 70px;
-  	line-height: 33px;
-  	font-weight: 600;
-}
-.div {
-  	position: absolute;
-  	top: 257px;
-  	left: 70px;
-  	font-size: 16px;
-  	line-height: 33px;
-  	font-weight: 600;
-  	color: rgba(74, 74, 74, 0.6);
-}
-.vector-icon {
-  	position: absolute;
-  	height: 4.24%;
-  	top: 25.43%;
-  	bottom: 70.33%;
-  	left: 14px;
-  	max-height: 100%;
-  	width: 23.7px;
-}
-.group-child {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	width: 429px;
-  	height: 61px;
-}
-.completou-ir-a {
-  	position: absolute;
-  	top: 5px;
-  	left: 70px;
-  	line-height: 33px;
-  	font-weight: 600;
-}
-.div1 {
-  	position: absolute;
-  	top: 30px;
-  	left: 70px;
-  	font-size: 16px;
-  	line-height: 33px;
-  	font-weight: 600;
-  	color: rgba(74, 74, 74, 0.6);
-}
-.vector-icon1 {
-  	position: absolute;
-  	height: 62.7%;
-  	top: 15.87%;
-  	bottom: 21.43%;
-  	left: 14px;
-  	max-height: 100%;
-  	width: 23.7px;
-}
-.vector-parent {
-  	position: absolute;
-  	top: 496px;
-  	left: 0px;
-  	width: 429px;
-  	height: 63px;
-}
-.vector-group {
-  	position: absolute;
-  	top: 426px;
-  	left: 2px;
-  	width: 429px;
-  	height: 63px;
-}
-.group-inner {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	width: 429px;
-  	height: 124px;
-}
-.completou-o-aprendizdo {
-  	position: absolute;
-  	top: 0px;
-  	left: 60px;
-  	line-height: 33px;
-  	font-weight: 600;
-  	display: flex;
-  	align-items: center;
-  	width: 359px;
-}
-.div3 {
-  	position: absolute;
-  	top: 91px;
-  	left: 60px;
-  	font-size: 16px;
-  	line-height: 33px;
-  	font-weight: 600;
-  	color: rgba(74, 74, 74, 0.6);
-}
-.mdiachievement-icon {
-  	position: absolute;
-  	top: 12px;
-  	left: 8px;
-  	width: 36px;
-  	height: 36px;
-  	overflow: hidden;
-}
-.vector-container {
-  	position: absolute;
-  	top: 295px;
-  	left: 2px;
-  	width: 429px;
-  	height: 124px;
-}
-.iniciou-a-o {
-  	position: absolute;
-  	top: 16px;
-  	left: 60px;
-  	line-height: 33px;
-  	font-weight: 600;
-  	display: flex;
-  	align-items: center;
-  	width: 359px;
-}
-.group-div {
-  	position: absolute;
-  	top: 566px;
-  	left: 0px;
-  	width: 429px;
-  	height: 124px;
-}
-.component-9-child {
-  	position: absolute;
-  	height: 100%;
-  	width: 100%;
-  	top: 0%;
-  	right: 0%;
-  	bottom: 0%;
-  	left: 0%;
-  	border-radius: 15px;
-  	background-color: #666363;
-}
-.component-9-item {
-  	position: absolute;
-  	height: 86.67%;
-  	width: 52%;
-  	top: 6.67%;
-  	right: 48%;
-  	bottom: 6.67%;
-  	left: 0%;
-  	border-radius: 50%;
-  	background-color: #fff;
-}
-.component-9 {
-  	position: absolute;
-  	top: 137px;
-  	left: 164px;
-  	width: 50px;
-  	height: 30px;
+a {
+    text-decoration: none;
 }
 .progresso {
-  	width: 100%;
-  	position: relative;
-  	background-color: #fff8e1;
-  	height: 932px;
-  	overflow: hidden;
-  	text-align: left;
-  	font-size: 24px;
-  	color: #4a4a4a;
-  	font-family: Roboto;
+    background-color: #fff8e1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
 }
 
-
-body {
-  	margin: 0;
-  	line-height: normal;
+.progresso .div {
+    background-color: #fff8e1;
+    overflow: hidden;
+    width: 431px;
+    height: 932px;
+    position: relative;
 }
 
+.progresso .overlap {
+    position: absolute;
+    width: 429px;
+    height: 62px;
+    top: 227px;
+    left: 0;
+}
+
+.progresso .rectangle {
+    position: absolute;
+    width: 429px;
+    height: 61px;
+    top: 0;
+    left: 0;
+}
+
+.progresso .text-wrapper {
+    position: absolute;
+    height: 33px;
+    top: 4px;
+    left: 70px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #4a4a4a;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 33px;
+    white-space: nowrap;
+}
+
+.progresso .text-wrapper-2 {
+    top: 29px;
+    left: 70px;
+    position: absolute;
+    height: 33px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #4a4a4a99;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 33px;
+    white-space: nowrap;
+}
+
+.progresso .vector {
+    position: absolute;
+    width: 24px;
+    height: 40px;
+    top: 10px;
+    left: 14px;
+}
+
+.progresso .logo-caixa {
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    top: 4951px;
+    left: 4940px;
+    object-fit: cover;
+}
+
+.progresso .overlap-group {
+    position: absolute;
+    width: 247px;
+    height: 129px;
+    top: 42px;
+    left: 14px;
+}
+
+.progresso .text-wrapper-3 {
+    position: absolute;
+    width: 247px;
+    height: 105px;
+    top: 0;
+    left: 0;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #4a4a4a;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: 33px;
+}
+
+.progresso .text-wrapper-4 {
+    position: absolute;
+    width: 147px;
+    height: 40px;
+    top: 89px;
+    left: 6px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #4a4a4ab5;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 33px;
+}
+
+.progresso .component {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    top: 95px;
+    left: 150px;
+    background-color: #666363;
+    border-radius: 15px;
+}
+
+.progresso .ellipse {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    top: 2px;
+    background-color: #ffffff;
+    border-radius: 13px;
+}
+
+.progresso .overlap-2 {
+    position: absolute;
+    width: 431px;
+    height: 95px;
+    top: 837px;
+    left: 0;
+    background-color: #ffd99d9c;
+}
+
+.progresso .back {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 12px;
+    left: 9px;
+    background-image: url(./img/union.svg);
+    background-size: 100% 100%;
+}
+
+.progresso .img {
+    position: absolute;
+    width: 54px;
+    height: 33px;
+    top: 19px;
+    left: 8px;
+}
+
+.progresso .home {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 12px;
+    left: 335px;
+    background-color: #fff8e1;
+    border-radius: 35px;
+}
+
+.progresso .material-symbols {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    top: 0;
+    left: 2px;
+}
+
+.progresso .group {
+    height: 63px;
+    top: 496px;
+    left: 0;
+    position: absolute;
+    width: 433px;
+}
+
+.progresso .overlap-group-2 {
+    position: relative;
+    width: 429px;
+    height: 63px;
+}
+
+.progresso .text-wrapper-5 {
+    position: absolute;
+    height: 33px;
+    top: 5px;
+    left: 70px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #4a4a4a;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 33px;
+    white-space: nowrap;
+}
+
+.progresso .text-wrapper-6 {
+    top: 30px;
+    left: 70px;
+    position: absolute;
+    height: 33px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #4a4a4a99;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 33px;
+    white-space: nowrap;
+}
+
+.progresso .overlap-wrapper {
+    height: 63px;
+    top: 426px;
+    left: 2px;
+    position: absolute;
+    width: 433px;
+}
+
+.progresso .overlap-group-wrapper {
+    height: 124px;
+    top: 295px;
+    left: 2px;
+    position: absolute;
+    width: 433px;
+}
+
+.progresso .overlap-3 {
+    position: relative;
+    width: 429px;
+    height: 124px;
+    background-image: url(./img/rectangle-19.svg);
+    background-size: 100% 100%;
+}
+
+.progresso .overlap-group-3 {
+    position: absolute;
+    width: 359px;
+    height: 124px;
+    top: 0;
+    left: 60px;
+}
+
+.progresso .p {
+    position: absolute;
+    width: 359px;
+    height: 99px;
+    top: 0;
+    left: 0;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #4a4a4a;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 33px;
+}
+
+.progresso .text-wrapper-7 {
+    top: 91px;
+    left: 0;
+    position: absolute;
+    height: 33px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #4a4a4a99;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 33px;
+    white-space: nowrap;
+}
+
+.progresso .mdi-achievement {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 12px;
+    left: 8px;
+}
+
+.progresso .div-wrapper {
+    height: 124px;
+    top: 566px;
+    left: 0;
+    position: absolute;
+    width: 433px;
+}
+
+.progresso .overlap-4 {
+    position: relative;
+    width: 429px;
+    height: 124px;
+    background-image: url(./img/rectangle-20.svg);
+    background-size: 100% 100%;
+}
+
+.progresso .text-wrapper-8 {
+    position: absolute;
+    width: 359px;
+    height: 66px;
+    top: 16px;
+    left: 60px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #4a4a4a;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 33px;
+}
+
+.progresso .text-wrapper-9 {
+    top: 91px;
+    left: 60px;
+    position: absolute;
+    height: 33px;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #4a4a4a99;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 33px;
+    white-space: nowrap;
+}
