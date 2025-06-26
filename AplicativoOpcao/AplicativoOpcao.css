@@ -1,0 +1,146 @@
+.subtract-icon {
+  	position: relative;
+  	width: 0px;
+  	height: 0px;
+}
+.pesquisar {
+  	position: absolute;
+  	top: calc(50% - 16.5px);
+  	left: 19px;
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.mdimicrophone-icon {
+  	position: absolute;
+  	top: 18px;
+  	left: 264px;
+  	width: 76px;
+  	height: 76px;
+  	overflow: hidden;
+}
+.subtract-parent {
+  	position: absolute;
+  	top: 430px;
+  	left: calc(50% - 180.5px);
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+  	border-radius: 20px;
+  	background-color: rgba(255, 217, 157, 0.61);
+  	width: 362px;
+  	height: 107px;
+  	overflow: hidden;
+}
+.abrir {
+  	position: absolute;
+  	top: calc(50% - 15.5px);
+  	left: 26px;
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.tablerhand-click-icon {
+  	position: absolute;
+  	top: 5px;
+  	left: 251px;
+  	width: 99px;
+  	height: 99px;
+  	overflow: hidden;
+}
+.subtract-group {
+  	position: absolute;
+  	top: 303px;
+  	left: calc(50% - 183.5px);
+  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+  	border-radius: 20px;
+  	background-color: rgba(245, 197, 24, 0.46);
+  	width: 362px;
+  	height: 107px;
+  	overflow: hidden;
+  	cursor: pointer;
+}
+.logo-caixa-41262-1-icon {
+  	position: absolute;
+  	top: 439px;
+  	left: -273px;
+  	width: 71px;
+  	height: 71px;
+  	object-fit: cover;
+}
+.o-que-voc {
+  	position: absolute;
+  	top: 226px;
+  	left: calc(50% - 205.5px);
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.aplicativos-opo-child {
+  	position: absolute;
+  	top: 837px;
+  	left: 0px;
+  	background-color: rgba(255, 217, 157, 0.61);
+  	width: 431px;
+  	height: 95px;
+}
+.back-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 81.67%;
+  	bottom: 1.39%;
+  	left: 2.09%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: cover;
+  	cursor: pointer;
+}
+.home-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 3.94%;
+  	bottom: 1.39%;
+  	left: 79.81%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	cursor: pointer;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 50px;
+  	background-color: #ee5c3b;
+  	width: 98px;
+  	height: 44px;
+}
+.sos {
+  	position: absolute;
+  	top: 0px;
+  	left: 20px;
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 10px;
+  	left: 316px;
+  	width: 98px;
+  	height: 44px;
+  	cursor: pointer;
+  	font-size: 36px;
+  	color: #fff;
+}
+.aplicativos-opo {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff8e1;
+  	height: 932px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 40px;
+  	color: #4a4a4a;
+  	font-family: Roboto;
+}
+

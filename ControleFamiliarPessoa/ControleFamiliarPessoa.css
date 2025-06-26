@@ -1,0 +1,298 @@
+.logo-caixa-41262-1-icon {
+  	position: absolute;
+  	top: 439px;
+  	left: -273px;
+  	width: 71px;
+  	height: 71px;
+  	object-fit: cover;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 50px;
+  	background-color: #ee5c3b;
+  	width: 98px;
+  	height: 44px;
+}
+.sos {
+  	position: absolute;
+  	top: 0px;
+  	left: 20px;
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 10px;
+  	left: 316px;
+  	width: 98px;
+  	height: 44px;
+  	cursor: pointer;
+  	font-size: 36px;
+  	color: #fff;
+}
+.controle-familiar {
+  	position: absolute;
+  	top: 43px;
+  	left: 14px;
+  	font-size: 40px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 247px;
+  	height: 105px;
+}
+.controle-familiar-pessoa-child {
+  	position: absolute;
+  	top: 837px;
+  	left: 0px;
+  	background-color: rgba(255, 217, 157, 0.61);
+  	width: 431px;
+  	height: 95px;
+}
+.back-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 81.67%;
+  	bottom: 1.39%;
+  	left: 2.09%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: cover;
+  	cursor: pointer;
+}
+.home-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 6.73%;
+  	bottom: 1.39%;
+  	left: 77.03%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	cursor: pointer;
+}
+.neta {
+  	position: absolute;
+  	top: 208px;
+  	left: 165px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: rgba(74, 74, 74, 0.71);
+  	display: flex;
+  	align-items: center;
+  	width: 100px;
+  	height: 40px;
+}
+.instagram-post-amarelo-ilustra-icon {
+  	position: absolute;
+  	top: 146px;
+  	left: 6px;
+  	width: 148px;
+  	height: 153px;
+  	object-fit: cover;
+}
+.ana-clara-silva {
+  	position: absolute;
+  	top: 172px;
+  	left: 167px;
+  	font-size: 32px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 311px;
+  	height: 50px;
+}
+.permisses {
+  	position: absolute;
+  	top: 331px;
+  	left: 14px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 247px;
+  	height: 32px;
+}
+.group-item {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 429px;
+  	height: 55px;
+}
+.alteraes-na-agenda {
+  	position: absolute;
+  	top: 16px;
+  	left: 7px;
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.component-9-child {
+  	position: absolute;
+  	height: 100%;
+  	width: 100%;
+  	top: 0%;
+  	right: 0%;
+  	bottom: 0%;
+  	left: 0%;
+  	border-radius: 15px;
+  	background-color: #666363;
+}
+.component-9-item {
+  	position: absolute;
+  	height: 86.67%;
+  	width: 52%;
+  	top: 6.67%;
+  	right: 48%;
+  	bottom: 6.67%;
+  	left: 0%;
+  	border-radius: 50%;
+  	background-color: #fff;
+}
+.component-9 {
+  	position: absolute;
+  	top: 11px;
+  	left: 366px;
+  	width: 50px;
+  	height: 30px;
+}
+.rectangle-group {
+  	position: absolute;
+  	top: 363px;
+  	left: 1px;
+  	width: 429px;
+  	height: 55px;
+}
+.rectangle-container {
+  	position: absolute;
+  	top: 418px;
+  	left: 0px;
+  	width: 429px;
+  	height: 55px;
+}
+.controle-familiar-pessoa-item {
+  	position: absolute;
+  	top: 473px;
+  	left: 1px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 429px;
+  	height: 55px;
+}
+.controle-familiar-pessoa-inner {
+  	position: absolute;
+  	top: 528px;
+  	left: 1px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 429px;
+  	height: 55px;
+}
+.rectangle-div {
+  	position: absolute;
+  	top: 583px;
+  	left: 2px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 429px;
+  	height: 55px;
+}
+.controle-familiar-pessoa-child1 {
+  	position: absolute;
+  	top: 638px;
+  	left: 1px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	border: 1px solid rgba(255, 217, 157, 0.61);
+  	box-sizing: border-box;
+  	width: 430px;
+  	height: 55px;
+}
+.component-10 {
+  	position: absolute;
+  	top: 541px;
+  	left: 368px;
+  	width: 50px;
+  	height: 30px;
+}
+.component-11 {
+  	position: absolute;
+  	top: 594px;
+  	left: 368px;
+  	width: 50px;
+  	height: 30px;
+}
+.component-13 {
+  	position: absolute;
+  	top: 649px;
+  	left: 368px;
+  	width: 50px;
+  	height: 30px;
+}
+.alteraes-no-controle {
+  	position: absolute;
+  	top: 488px;
+  	left: 9px;
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.acesso-ao-seu {
+  	position: absolute;
+  	top: 539px;
+  	left: 9px;
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.acesso-ao-cofre {
+  	position: absolute;
+  	top: 594px;
+  	left: 9px;
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.acesso-ao-progresso {
+  	position: absolute;
+  	top: 649px;
+  	left: 8px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 291px;
+}
+.component-12 {
+  	position: absolute;
+  	top: 489px;
+  	left: 368px;
+  	width: 50px;
+  	height: 30px;
+}
+.controle-familiar-pessoa {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff8e1;
+  	height: 932px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 24px;
+  	color: #000;
+  	font-family: Roboto;
+}
+
