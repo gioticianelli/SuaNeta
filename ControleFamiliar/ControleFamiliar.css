@@ -1,0 +1,296 @@
+.logo-caixa-41262-1-icon {
+  	position: absolute;
+  	top: 439px;
+  	left: -273px;
+  	width: 71px;
+  	height: 71px;
+  	object-fit: cover;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 50px;
+  	background-color: #ee5c3b;
+  	width: 98px;
+  	height: 44px;
+}
+.sos {
+  	position: absolute;
+  	top: 0px;
+  	left: 20px;
+  	line-height: 33px;
+  	font-weight: 600;
+}
+.rectangle-parent {
+  	position: absolute;
+  	top: 10px;
+  	left: 316px;
+  	width: 98px;
+  	height: 44px;
+  	cursor: pointer;
+  	font-size: 36px;
+  	color: #fff;
+}
+.controle-familiar1 {
+  	position: absolute;
+  	top: 43px;
+  	left: 14px;
+  	font-size: 40px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 247px;
+  	height: 105px;
+}
+.controle-familiar-child {
+  	position: absolute;
+  	top: 837px;
+  	left: 0px;
+  	background-color: rgba(255, 217, 157, 0.61);
+  	width: 431px;
+  	height: 95px;
+}
+.back-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 81.67%;
+  	bottom: 1.39%;
+  	left: 2.09%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: cover;
+  	cursor: pointer;
+}
+.controle-familiar-item {
+  	position: absolute;
+  	top: 675px;
+  	left: 0px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	width: 429px;
+  	height: 116px;
+}
+.home-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 5.8%;
+  	bottom: 1.39%;
+  	left: 77.96%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	cursor: pointer;
+}
+.covidados {
+  	position: absolute;
+  	top: 636px;
+  	left: 20px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: rgba(0, 0, 0, 0.47);
+  	display: flex;
+  	align-items: center;
+  	width: 247px;
+  	height: 32px;
+}
+.group-item {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 20px;
+  	background-color: #d9d9d9;
+  	width: 151px;
+  	height: 28px;
+}
+.vector-icon {
+  	position: absolute;
+  	top: 1px;
+  	left: 116px;
+  	width: 29px;
+  	height: 26px;
+}
+.adicionar {
+  	position: absolute;
+  	top: 6px;
+  	left: 11px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 185px;
+  	height: 17px;
+}
+.rectangle-group {
+  	position: absolute;
+  	top: 134px;
+  	left: 9px;
+  	width: 196px;
+  	height: 28px;
+  	color: #4a4a4a;
+}
+.group-inner {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: rgba(255, 198, 157, 0.3);
+  	width: 429px;
+  	height: 116px;
+}
+.neta {
+  	position: absolute;
+  	top: 43px;
+  	left: 117px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 68px;
+  	height: 26px;
+}
+.instagram-post-amarelo-ilustra-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: 9px;
+  	width: 100px;
+  	height: 99px;
+  	object-fit: cover;
+}
+.ana-clara-silva {
+  	position: absolute;
+  	top: 16px;
+  	left: 118px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 210px;
+  	height: 32px;
+}
+.rectangle-container {
+  	position: absolute;
+  	top: 245px;
+  	left: 0px;
+  	width: 429px;
+  	height: 116px;
+  	cursor: pointer;
+}
+.filha {
+  	position: absolute;
+  	top: 45px;
+  	left: 122px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 68px;
+  	height: 26px;
+}
+.instagram-post-amarelo-ilustra-icon1 {
+  	position: absolute;
+  	top: 2px;
+  	left: 9px;
+  	width: 100px;
+  	height: 99px;
+  	object-fit: cover;
+}
+.carla-almeida-silva {
+  	position: absolute;
+  	top: 12px;
+  	left: 119px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 210px;
+  	height: 32px;
+}
+.group-div {
+  	position: absolute;
+  	top: 367px;
+  	left: 0px;
+  	width: 429px;
+  	height: 116px;
+}
+.sobrinho {
+  	position: absolute;
+  	top: 45px;
+  	left: 116px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 109px;
+  	height: 26px;
+}
+.instagram-post-amarelo-ilustra-icon2 {
+  	position: absolute;
+  	top: 2px;
+  	left: 8px;
+  	width: 100px;
+  	height: 99px;
+  	object-fit: cover;
+}
+.rubio-matos-silveira {
+  	position: absolute;
+  	top: 18px;
+  	left: 117px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 241px;
+  	height: 32px;
+}
+.rectangle-parent1 {
+  	position: absolute;
+  	top: 489px;
+  	left: 1px;
+  	width: 429px;
+  	height: 116px;
+}
+.sua-famlia {
+  	position: absolute;
+  	top: 206px;
+  	left: 20px;
+  	font-size: 24px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: rgba(0, 0, 0, 0.47);
+  	display: flex;
+  	align-items: center;
+  	width: 247px;
+  	height: 32px;
+}
+.material-symbolsadd {
+  	position: absolute;
+  	top: 674px;
+  	left: 117px;
+  	width: 24px;
+  	height: 24px;
+  	overflow: hidden;
+}
+.controle-familiar {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff8e1;
+  	height: 932px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 20px;
+  	color: rgba(74, 74, 74, 0.71);
+  	font-family: Roboto;
+}
+

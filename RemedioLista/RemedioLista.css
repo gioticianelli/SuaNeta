@@ -1,0 +1,181 @@
+.sos-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 50px;
+  	background-color: #ee5c3b;
+  	width: 98px;
+  	height: 29.9px;
+}
+.sos1 {
+  	position: absolute;
+  	top: 0px;
+  	left: 20px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 58px;
+  	height: 22.4px;
+}
+.sos {
+  	position: absolute;
+  	top: 10px;
+  	left: 316px;
+  	width: 98px;
+  	height: 29.9px;
+  	cursor: pointer;
+}
+.remedio-lista-child {
+  	position: absolute;
+  	top: 837px;
+  	left: 0px;
+  	background-color: rgba(255, 217, 157, 0.61);
+  	width: 431px;
+  	height: 95px;
+}
+.back-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 81.67%;
+  	bottom: 1.39%;
+  	left: 2.09%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	object-fit: cover;
+  	cursor: pointer;
+}
+.home-icon {
+  	position: absolute;
+  	height: 7.51%;
+  	width: 16.24%;
+  	top: 91.09%;
+  	right: 5.8%;
+  	bottom: 1.39%;
+  	left: 77.96%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+  	cursor: pointer;
+}
+.remdio {
+  	position: absolute;
+  	top: 50px;
+  	left: 29px;
+  	font-size: 40px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 178px;
+  	height: 32px;
+}
+.material-symbolspill-outline-icon {
+  	position: absolute;
+  	top: 43px;
+  	left: 192px;
+  	width: 47px;
+  	height: 47px;
+  	overflow: hidden;
+}
+.group-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 429px;
+  	height: 200px;
+}
+.dipirona {
+  	position: absolute;
+  	top: 6px;
+  	left: 14px;
+  	font-size: 32px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 32px;
+}
+.cpsula-por-dia {
+  	position: absolute;
+  	top: 40px;
+  	left: 14px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 40px;
+}
+.div {
+  	position: absolute;
+  	top: 82px;
+  	left: 14px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 40px;
+}
+.div1 {
+  	position: absolute;
+  	top: 120px;
+  	left: 14px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 40px;
+}
+.notificaes {
+  	position: absolute;
+  	top: 160px;
+  	left: 14px;
+  	line-height: 33px;
+  	font-weight: 600;
+  	display: flex;
+  	align-items: center;
+  	width: 235px;
+  	height: 40px;
+}
+.som-icon {
+  	position: absolute;
+  	height: 24.5%;
+  	width: 10.02%;
+  	top: 5.5%;
+  	right: 3.5%;
+  	bottom: 70%;
+  	left: 86.48%;
+  	max-width: 100%;
+  	overflow: hidden;
+  	max-height: 100%;
+}
+.vector-parent {
+  	position: absolute;
+  	top: 158px;
+  	left: 1px;
+  	width: 429px;
+  	height: 200px;
+  	font-size: 24px;
+  	color: rgba(74, 74, 74, 0.71);
+}
+.remedio-lista {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff8e1;
+  	height: 932px;
+  	overflow: hidden;
+  	text-align: left;
+  	font-size: 36px;
+  	color: #fff;
+  	font-family: Roboto;
+}
+
