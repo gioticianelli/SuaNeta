@@ -1,112 +1,250 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-  	<link rel="stylesheet"  href="./IndexPessoal/indexPessoal.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open Sans:wght@600&display=swap" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" />
-  	
-  	
-  	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Pessoal</title>
+    <style>
+        /* RESET E ESTILOS GERAIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: #fefaf4;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ESTRUTURA PRINCIPAL */
+        .index-pessoal {
+            width: 100%;
+            max-width: 431px;
+            margin: 0 auto;
+            position: relative;
+            height: 932px;
+            overflow-y: auto;
+            padding-bottom: 95px;
+        }
+
+        /* CABEÇALHO */
+        .sos-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ee5c3b;
+            border-radius: 50px;
+            width: 98px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .user-header {
+            position: absolute;
+            top: 25px;
+            right: 130px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-avatar {
+            width: 120px;  /* Aumentei o tamanho */
+            height: 120px; /* Aumentei o tamanho */
+            border-radius: 15px;
+            object-fit: cover;
+            /* Removi a borda colorida */
+        }
+
+        .user-text {
+            font-size: 36px; /* Aumentei o tamanho do texto */
+            font-weight: 600;
+            line-height: 1.2;
+            color: #4a4a4a;
+            text-align: right;
+        }
+
+        /* ÁREA DE COMANDO DE VOZ */
+        .voice-command {
+            position: absolute;
+            top: 140px; /* Ajustei a posição */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 398px;
+            height: 84px;
+            background-color: #fff8e1;
+            border: 2.5px solid #f29985;
+            border-radius: 20px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 60px 0 20px;
+        }
+
+        .voice-command-text {
+            font-family: 'Open Sans';
+            font-size: 24px;
+            font-weight: 600;
+            color: #4a4a4a;
+            white-space: nowrap;
+        }
+
+        .microphone-icon {
+            position: absolute;
+            right: 15px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .microphone-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* GRADE DE FUNCIONALIDADES */
+        .grid-container {
+            position: absolute;
+            top: 250px; /* Ajustei a posição */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 398px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding-bottom: 30px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 217, 157, 0.65);
+            border-radius: 20px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(245, 197, 24, 0.3);
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+            background-color: rgba(255, 217, 157, 0.8);
+        }
+
+        .grid-item img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 12px;
+            object-fit: contain;
+        }
+
+        .grid-item .label {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            color: #4a4a4a;
+        }
+
+        /* BARRA DE NAVEGAÇÃO */
+        .nav-container {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 431px;
+            height: 95px;
+            background-color: rgba(255, 217, 157, 0.61);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-icon {
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .nav-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
-  	
-  	<div class="index-pessoal">
-    		<div class="mdimicrophone-parent">
-      			<img class="mdimicrophone-icon" alt="" src="./IndexPessoal/mdi_microphone.svg">
-      			
-      			<div class="o-que-voc">O que você quer fazer?</div>
-    		</div>
-    		<div class="sua-neta">
-      			<span class="sua-neta-txt-container">
-        				<p class="sua">Sua </p>
-        				<p class="sua">Neta</p>
-      			</span>
-    		</div>
-    		<img class="mask-group-icon" alt="" src="./IndexPessoal/Captura de tela 2025-04-13 205732 1.png">
-    		
-    		<div class="phcalendar-parent" id="frameContainer1">
-      			<img class="phcalendar-icon" alt="" src="./IndexPessoal/ph_calendar.svg">
-      			
-      			<div class="agenda">Agenda</div>
-    		</div>
-    		<div class="aplicativos-parent" id="frameContainer2">
-      			<div class="aplicativos">Aplicativos</div>
-      			<img class="material-symbolsapps-icon" alt="" src="./IndexPessoal/material-symbols_apps.svg">
-      			
-    		</div>
-    		<div class="perfil-parent" id="frameContainer3">
-      			<div class="perfil">Perfil</div>
-      			<img class="material-symbolsperson-icon" alt="" src="./IndexPessoal/material-symbols_person.svg">
-      			
-    		</div>
-    		<div class="mingcutelock-line-parent" id="frameContainer4">
-      			<img class="mingcutelock-line-icon" alt="" src="./IndexPessoal/mingcute_lock-line.svg">
-      			
-      			<div class="senhas">Cofre de Senhas</div>
-    		</div>
-    		<div class="icon-park-outlinepeoples-parent" id="frameContainer5">
-      			<img class="icon-park-outlinepeoples" alt="" src="./IndexPessoal/icon-park-outline_peoples.svg">
-      			
-      			<div class="controle-familiar">
-        				<span class="controle-familiar-txt-container">
-          					<p class="sua">Controle</p>
-          					<p class="sua">Familiar</p>
-        				</span>
-      			</div>
-    		</div>
-    		<div class="rectangle-parent" id="groupContainer">
-      			<div class="group-child">
-      			</div>
-      			<div class="sos">sos</div>
-    		</div>
-  	</div>
-  	
-  	
-  	
-  	
-  	<script>
-    		var frameContainer1 = document.getElementById("frameContainer1");
-    		if(frameContainer1) {
-      			frameContainer1.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-    		var frameContainer2 = document.getElementById("frameContainer2");
-    		if(frameContainer2) {
-      			frameContainer2.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-    		var frameContainer3 = document.getElementById("frameContainer3");
-    		if(frameContainer3) {
-      			frameContainer3.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-    		var frameContainer4 = document.getElementById("frameContainer4");
-    		if(frameContainer4) {
-      			frameContainer4.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-    		var frameContainer5 = document.getElementById("frameContainer5");
-    		if(frameContainer5) {
-      			frameContainer5.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-    		var groupContainer = document.getElementById("groupContainer");
-    		if(groupContainer) {
-      			groupContainer.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}</script></body>
+    <div class="index-pessoal">
+        <!-- CABEÇALHO -->
+        <div class="sos-button" onclick="window.location.href='sos.html'">SOS</div>
+        <div class="user-header">
+            <img src="./img/vovo01.png" alt="Vovó" class="user-avatar">
+            <div class="user-text">Sua<br>Neta</div>
+        </div>
+        
+        <!-- COMANDO DE VOZ -->
+        <div class="voice-command">
+            <div class="voice-command-text">O que você quer fazer?</div>
+            <img class="microphone-icon" src="./img/microphone.svg" alt="Microfone" onclick="ativarVoz()">
+        </div>
+        
+        <!-- GRADE DE FUNCIONALIDADES -->
+        <div class="grid-container">
+            <div class="grid-item" onclick="window.location.href='agenda.html'">
+                <img src="./img/calendar.svg" alt="Agenda">
+                <div class="label">Agenda</div>
+            </div>
+            
+            <div class="grid-item" onclick="window.location.href='familia.html'">
+                <img src="./img/peoples.svg" alt="Família">
+                <div class="label">Controle Familiar</div>
+            </div>
+            
+            <div class="grid-item" onclick="window.location.href='aplicativos.html'">
+                <img src="./img/apps.svg" alt="Aplicativos">
+                <div class="label">Aplicativos</div>
+            </div>
+            
+            <div class="grid-item" onclick="window.location.href='senhas.html'">
+                <img src="./img/lock-line.svg" alt="Senhas">
+                <div class="label">Cofre de Senhas</div>
+            </div>
+            
+            <div class="grid-item" onclick="window.location.href='perfil.html'">
+                <img src="./img/person.svg" alt="Perfil">
+                <div class="label">Perfil</div>
+            </div>
+            
+            <!-- Espaço reservado para futura funcionalidade -->
+            <div class="grid-item" style="visibility: hidden;"></div>
+        </div>
+    </div>
+
+    <script>
+        // Função para ativar comando de voz
+        function ativarVoz() {
+            alert("Sistema de voz ativado. Fale agora...");
+            // Implementação real do reconhecimento de voz viria aqui
+        }
+    </script>
+</body>
 </html>

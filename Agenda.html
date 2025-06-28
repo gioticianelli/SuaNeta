@@ -1,115 +1,1170 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="initial-scale=1, width=device-width">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda para Idosos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-	<link rel="stylesheet" href="./Agenda/Agenda.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open Sans:wght@600&display=swap" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" />
+        body {
+            background-color: #fff8e1;
+            color: #4a4a4a;
+        }
+
+        #remedio-screen .remedio-field {
+            background-color: #f6e08e91;
+            border-radius: 10px;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+        }
+
+        #remedio-screen .remedio-input,
+        #remedio-screen .remedio-input-bold,
+        #remedio-screen .styled-select {
+            border-bottom: 1px solid #d4b862 !important;
+        }
+
+        #remedio-screen .remedio-label {
+            color: #5a5a5a;
+        }
+
+        #remedio-screen .lembrete-label {
+            color: #5a5a5a;
+        }
+
+        /* Mantém o fundo original para o container principal */
+        #remedio-screen {
+            background-color: #fff8e183 !important;
+        }
+
+        .screen {
+            width: 100%;
+            max-width: 431px;
+            height: 932px;
+            position: relative;
+            overflow-y: auto;
+            margin: 0 auto;
+            background-color: #fff8e1;
+            padding-bottom: 100px;
+            box-sizing: border-box;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Barra de navegação fixa */
+        .nav-container {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 431px;
+            height: 95px;
+            background-color: rgba(255, 217, 157, 0.61);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 100;
+        }
+
+        .nav-icon {
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+        }
+
+        /* Elementos comuns */
+        .page-title {
+            position: absolute;
+            top: 50px;
+            left: 30px;
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .sos-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background-color: #ee5c3b;
+            border-radius: 50px;
+            width: 98px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        /* Estilo da tela principal */
+        .compromissos-button {
+            position: absolute;
+            top: 183px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            background-color: rgba(245, 197, 24, 0.97);
+            width: 362px;
+            height: 107px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .compromissos-container {
+            position: absolute;
+            top: 310px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 362px;
+            padding-top: 20px;
+        }
+
+        .compromisso-card {
+            width: 100%;
+            min-height: 100px;
+            background-color: rgba(245, 197, 24, 0.2);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .compromisso-titulo {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .compromisso-icone {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .compromisso-info {
+            font-size: 22px;
+            margin-left: 50px;
+            margin-bottom: 5px;
+        }
+
+        .compromisso-data {
+            font-weight: 600;
+        }
+
+        /* Estilo da tela de opções */
+        .subtract-icon {
+            position: relative;
+            width: 0px;
+            height: 0px;
+        }
+
+        .remdio {
+            font-size: 36px;
+            line-height: 40px;
+            font-weight: 700;
+            position: absolute;
+            top: calc(50% - 16.5px);
+            left: calc(50% - 79px);
+            line-height: 33px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .button-remdio {
+            position: absolute;
+            top: 298px;
+            left: 32px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            background-color: rgba(254, 60, 60, 0.89);
+            width: 362px;
+            height: 107px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .evento {
+            font-size: 36px;
+            line-height: 40px;
+            font-weight: 700;
+            position: absolute;
+            top: calc(50% - 16.5px);
+            left: calc(50% - 61px);
+            line-height: 33px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .button-evento {
+            position: absolute;
+            top: 464px;
+            left: 32px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            background-color: rgba(51, 108, 232, 0.67);
+            width: 362px;
+            height: 107px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        /* NOVOS ESTILOS PARA O FORMULÁRIO DE REMÉDIO */
+        .remedio-form-container {
+            position: absolute;
+            top: 150px;
+            left: 30px;
+            width: 370px;
+        }
+
+        .remedio-field {
+            margin-bottom: 20px;
+        }
+
+        .remedio-label {
+            display: block;
+            font-size: 20px;
+            color: #5a5a5a;
+            margin-bottom: 5px;
+        }
+
+        .remedio-input {
+            width: 100%;
+            padding: 8px 0;
+            font-size: 24px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background-color: transparent;
+        }
+
+        .remedio-input-bold {
+            font-weight: bold;
+            width: 100%;
+            padding: 8px 0;
+            font-size: 24px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background-color: transparent;
+        }
+
+        .dual-column {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dual-column>div {
+            width: 48%;
+        }
+
+        .lembrete-container {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .lembrete-label {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .lembrete-checkbox {
+            width: 30px;
+            height: 30px;
+        }
+
+        .save-button {
+            position: absolute;
+            bottom: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f5c518;
+            border: none;
+            border-radius: 50px;
+            width: 200px;
+            height: 60px;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Estilos para lista de remédios */
+        .remedio-item {
+            position: relative;
+            width: 90%;
+            min-height: 180px;
+            background-color: white;
+            border-radius: 20px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .remedio-name {
+            font-size: 28px;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .remedio-info {
+            font-size: 22px;
+            color: rgba(74, 74, 74, 0.71);
+            word-break: break-word;
+        }
+
+        .remedio-horario {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .remedio-data {
+            font-weight: 600;
+        }
+
+        .remedio-notificacao {
+            font-size: 20px;
+            color: #4a4a4a;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Estilos para frequência personalizada */
+        .frequencia-personalizada {
+            display: none;
+        }
+
+        .excluir-remedio {
+            color: #ee5c3b;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: 15px;
+            display: block;
+            text-align: center;
+            padding: 8px;
+            border: 1px solid #ee5c3b;
+            border-radius: 10px;
+            background-color: rgba(238, 92, 59, 0.1);
+        }
+
+        .excluir-remedio:hover {
+            background-color: rgba(238, 92, 59, 0.2);
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-lembrete-remedio {
+            position: absolute;
+            top: 630px;
+            left: 32px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            background-color: rgba(76, 175, 80, 0.8);
+            width: 362px;
+            height: 107px;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        /* Novos estilos para a tela de opções de remédio */
+        .button-cadastrar-remedio {
+            position: absolute;
+            top: 298px;
+            left: 32px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            background-color: #fe633ce3;
+            width: 362px;
+            height: 107px;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .button-lista-remedios {
+            position: absolute;
+            top: 464px;
+            left: 32px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            background-color: #fe633ce3;
+            width: 362px;
+            height: 107px;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f7f6f6;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .subtract-icon {
+            display: none;
+        }
+
+        /* ESTILOS PARA O CAMPO DE DOSE */
+        dose-container {
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .dose-input {
+            width: 120px;
+            /* Largura fixa reduzida */
+            padding: 8px 0;
+            font-size: 24px;
+            border: none;
+            border-bottom: 1px solid #d4b862;
+            background-color: transparent;
+        }
+
+        .tipo-dose-select {
+            width: 140px;
+            /* Largura um pouco maior para o seletor */
+            padding: 8px 0;
+            font-size: 24px;
+            border: none;
+            border-bottom: 1px solid #d4b862;
+            background-color: transparent;
+        }
 
 
+        /* Estilos para os botões de Evento */
+        .button-evento {
+            background-color: #336CE8 !important;
+            /* Azul */
+        }
 
+        .button-cadastrar-evento {
+            background-color: #4778e2e3 !important;
+            /* Azul */
+            position: absolute;
+            top: 298px;
+            left: 32px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            width: 362px;
+            height: 107px;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .button-lista-eventos {
+            background-color: #4778e2e3 !important;
+            /* Azul */
+            position: absolute;
+            top: 464px;
+            left: 32px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            width: 362px;
+            height: 107px;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        /* Se quiser um hover effect */
+        .button-evento:hover,
+        .button-cadastrar-evento:hover,
+        .button-lista-eventos:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            transition: all 0.2s ease;
+            
+        }
+
+        /* Estilo para a tela de eventos - mesmo fundo dos remédios */
+#evento-screen {
+    background-color: #fff8e183 !important;
+}
+
+#evento-screen .remedio-field {
+    background-color: #f6e08e91;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+#evento-screen .remedio-input,
+#evento-screen .remedio-input-bold,
+#evento-screen .styled-select {
+    border-bottom: 1px solid #d4b862 !important;
+}
+
+#evento-screen .remedio-label {
+    color: #5a5a5a;
+}
+
+
+    </style>
 </head>
 
 <body>
+    <!-- Tela Agenda Principal -->
+    <div id="agenda-screen" class="screen">
+        <div class="page-title">Agenda</div>
+        <div class="sos-button" id="sosButton">SOS</div>
 
-	<div class="agenda">
-		<div class="agenda-child">
-		</div>
-		<img class="back-icon" alt="" src="./Agenda/back.svg" id="backImage">
+        <div class="compromissos-button" id="compromissos-btn">
+            Compromissos
+        </div>
 
-		<img class="home-icon" alt="" src="./Agenda/material-symbols-light_home-rounded.svg" id="home">
+        <div class="compromissos-container" id="lista-compromissos">
+            <!-- Compromissos serão adicionados aqui dinamicamente -->
+        </div>
 
-		<div class="subtract-parent" id="frameContainer">
-			<img class="subtract-icon" alt="" src="Subtract.svg">
+        <div class="nav-container">
+            <img src="./img/back.svg" class="nav-icon" id="back-btn">
+            <img src="./img/home.svg" class="nav-icon" id="home-btn">
+        </div>
+    </div>
 
-			<div class="compromissos">Compromissos</div>
-			<img class="material-symbolssearch-icon" alt="" src="./Agenda/material-symbols_search.svg">
+    <!-- Tela de Opções -->
+    <div id="opcao-screen" class="screen hidden">
+        <div class="page-title">Agenda</div>
+        <div class="sos-button" id="sosButtonOpcao">SOS</div>
 
-		</div>
-		<div class="subtract-group">
-			<img class="subtract-icon" alt="" src="Subtract.svg">
+        <div class="button-remdio" id="buttonRemdioContainer">
+            <img class="subtract-icon" alt="" src="Subtract.svg">
+            <div class="remdio">Remédio</div>
+        </div>
 
-			<img class="iconoirbirthday-cake" alt="" src="./Agenda/iconoir_birthday-cake.svg">
+        <div class="button-evento" id="buttonEventoContainer">
+            <img class="subtract-icon" alt="" src="Subtract.svg">
+            <div class="evento">Evento</div>
+        </div>
 
-			<div class="controle-familiar">20/04/2025</div>
-			<div class="controle-familiar1">Aniversário Rosa</div>
-		</div>
-		<div class="rectangle-parent" id="groupContainer">
-			<div class="group-child">
-			</div>
-			<a href="SOS.html">
-				<div class="sos">sos</div>
-			</a>
-		</div>
-		<div class="agenda1">Agenda</div>
-		<div class="agenda-item">
-		</div>
-		<div class="agenda-inner">
-		</div>
-		<div class="line-div">
-		</div>
-		<div class="consulta-mdica">
-			<div class="subtract-wrapper">
-				<img class="subtract-icon" alt="" src="Subtract.svg">
+        <div class="nav-container">
+            <img src="./img/back.svg" class="nav-icon" id="back-btn-opcao">
+            <img src="./img/home.svg" class="nav-icon" id="home-btn-opcao">
+        </div>
+    </div>
 
-			</div>
-			<div class="data">10/05/2025</div>
-			<img class="formkitdate-icon" alt="" src="./Agenda/mingcute_time-line.svg">
+    <!-- Tela de Cadastro de Remédio -->
+    <div id="remedio-screen" class="screen hidden">
+        <div class="page-title">Remédio</div>
+        <div class="sos-button" id="sosButtonRemedio">SOS</div>
 
-			<img class="mingcutetime-line-icon" alt="" src="./Agenda/mingcute_time-line.svg">
+        <div class="remedio-form-container">
+            <div class="remedio-field">
+                <span class="remedio-label">Nome do remédio</span>
+                <input type="text" class="remedio-input-bold" id="nome-remedio" placeholder="">
+            </div>
 
-			<div class="hora">17:45</div>
-			<div class="controle-familiar2">Consulta Médica</div>
-		</div>
-		<div class="consulta-mdica1">
-			<div class="subtract-wrapper">
-				<img class="subtract-icon" alt="" src="Subtract.svg">
+            <div class="remedio-field">
+                <span class="remedio-label">Dose</span>
+                <div class="dose-container">
+                    <input type="text" class="dose-input" id="dose-remedio" placeholder="">
+                    <select class="tipo-dose-select" id="tipo-dose-remedio">
+                        <option value="cápsula" selected>Cápsula(s)</option>
+                        <option value="ml">ml</option>
+                        <option value="gotas">Gota(s)</option>
+                        <option value="comprimido">Comprimido(s)</option>
+                        <option value="mg">mg</option>
+                        <option value="g">g</option>
+                        <option value="colher">Colher(es)</option>
+                    </select>
+                </div>
+            </div>
 
-			</div>
-			<div class="data">1 cápsula</div>
-			<img class="formkitdate-icon" alt="" src="./Agenda/formkit_date.svg">
+            <div class="remedio-field">
+                <span class="remedio-label">Frequência</span>
+                <select class="remedio-input-bold" id="frequencia-remedio">
+                    <option value="diariamente" selected>Diariamente</option>
+                    <option value="semanalmente">Semanalmente</option>
+                    <option value="mensalmente">Mensalmente</option>
+                    <option value="personalizado">Personalizado</option>
+                </select>
+            </div>
 
-			<img class="mingcutetime-line-icon" alt="" src="./Agenda/mingcute_time-line.svg">
+            <div class="remedio-field frequencia-personalizada">
+                <span class="remedio-label">Descreva a frequência</span>
+                <input type="text" class="remedio-input" id="frequencia-personalizada-texto"
+                    placeholder="Ex: A cada 3 dias">
+            </div>
 
-			<div class="hora">12:00</div>
-			<div class="controle-familiar2">Dipirona</div>
-		</div>
-	</div>
+            <div class="remedio-field dual-column">
+                <div>
+                    <span class="remedio-label">Horários</span>
+                    <input type="time" class="remedio-input" id="horario1-remedio">
+                </div>
+                <div>
+                    <span class="remedio-label">Data final</span>
+                    <input type="date" class="remedio-input" id="data-final-remedio">
+                </div>
+            </div>
 
+            <div class="remedio-field">
+                <div class="lembrete-container">
+                    <span class="lembrete-label">Lembrete</span>
+                    <input type="checkbox" id="lembrete-remedio" class="lembrete-checkbox">
+                    <span id="notificacao-status"
+                        style="margin-left: 10px; display: none; color: #4CAF50; font-weight: bold;"></span>
+                </div>
+            </div>
+        </div>
 
+        <button class="save-button" id="salvar-remedio">Salvar</button>
 
+        <div class="nav-container">
+            <img src="./img/back.svg" class="nav-icon" id="back-btn-remedio">
+            <img src="./img/home.svg" class="nav-icon" id="home-btn-remedio">
+        </div>
+    </div>
 
-	<script>
-		var backImage = document.getElementById("backImage");
-		if (backImage) {
-			backImage.addEventListener("click", function (e) {
-				// Add your code here
-			});
-		}
+    <!-- Tela de Lista de Remédios -->
+    <div id="remedio-lista-screen" class="screen hidden">
+        <div class="page-title">Remédio</div>
+        <div class="sos-button" id="sosButtonLista">SOS</div>
 
-		var home = document.getElementById("home");
-		if (home) {
-			home.addEventListener("click", function (e) {
-				// Add your code here
-			});
-		}
+        <div id="lista-remedios" style="padding-top: 20px;">
+            <!-- Os remédios serão adicionados aqui dinamicamente -->
+        </div>
 
-		var frameContainer = document.getElementById("frameContainer");
-		if (frameContainer) {
-			frameContainer.addEventListener("click", function (e) {
-				// Add your code here
-			});
-		}
+        <div class="nav-container">
+            <img src="./img/back.svg" class="nav-icon" id="back-btn-lista">
+            <img src="./img/home.svg" class="nav-icon" id="home-btn-lista">
+        </div>
+    </div>
 
-		var groupContainer = document.getElementById("groupContainer");
-		if (groupContainer) {
-			groupContainer.addEventListener("click", function (e) {
-				// Add your code here
-			});
-		}</script>
+    <!-- Tela de Opções de Remédio -->
+    <div id="opcoes-remedio-screen" class="screen hidden">
+        <div class="page-title">Remédio</div>
+        <div class="sos-button" id="sosButtonOpcoesRemedio">SOS</div>
+
+        <div class="button-cadastrar-remedio" id="buttonCadastrarRemedio">
+            Cadastrar Remédio
+        </div>
+
+        <div class="button-lista-remedios" id="buttonListaRemedios">
+            Lista de Remédios
+        </div>
+
+        <div class="nav-container">
+            <img src="./img/back.svg" class="nav-icon" id="back-btn-opcoes-remedio">
+            <img src="./img/home.svg" class="nav-icon"
+                id="home-btn-opcoes-remedio">
+        </div>
+    </div>
+
+    <!-- Tela de Cadastro de Evento -->
+    <div id="evento-screen" class="screen hidden">
+        <div class="page-title">Evento</div>
+        <div class="sos-button" id="sosButtonEvento">SOS</div>
+
+        <div class="remedio-form-container">
+            <div class="remedio-field">
+                <span class="remedio-label">Nome do evento</span>
+                <input type="text" class="remedio-input-bold" id="nome-evento" placeholder="">
+            </div>
+
+            <div class="remedio-field dual-column">
+                <div>
+                    <span class="remedio-label">Data</span>
+                    <input type="date" class="remedio-input" id="data-evento">
+                </div>
+                <div>
+                    <span class="remedio-label">Horário</span>
+                    <input type="time" class="remedio-input" id="horario-evento">
+                </div>
+            </div>
+
+            <div class="remedio-field">
+                <span class="remedio-label">Descrição</span>
+                <textarea class="remedio-input" id="descricao-evento" rows="3"
+                    style="width: 100%; border-bottom: 1px solid #d4b862;"></textarea>
+            </div>
+
+            <div class="remedio-field">
+                <div class="lembrete-container">
+                    <span class="lembrete-label">Lembrete</span>
+                    <input type="checkbox" id="lembrete-evento" class="lembrete-checkbox">
+                    <span id="notificacao-status-evento"
+                        style="margin-left: 10px; display: none; color: #4CAF50; font-weight: bold;"></span>
+                </div>
+            </div>
+        </div>
+
+        <button class="save-button" id="salvar-evento">Salvar</button>
+
+        <div class="nav-container">
+            <img src="./img/back.svg" class="nav-icon" id="back-btn-evento">
+            <img src="./img/home.svg" class="nav-icon" id="home-btn-evento">
+        </div>
+    </div>
+
+    <!-- Tela de Lista de Eventos -->
+    <div id="evento-lista-screen" class="screen hidden">
+        <div class="page-title">Evento</div>
+        <div class="sos-button" id="sosButtonListaEvento">SOS</div>
+
+        <div id="lista-eventos" style="padding-top: 20px;">
+            <!-- Os eventos serão adicionados aqui dinamicamente -->
+        </div>
+
+        <div class="nav-container">
+            <img src="./img/back.svg" class="nav-icon" id="back-btn-lista-evento">
+            <img src="./img/home.svg" class="nav-icon"
+                id="home-btn-lista-evento">
+        </div>
+    </div>
+
+    <!-- Tela de Opções de Evento -->
+    <div id="opcoes-evento-screen" class="screen hidden">
+        <div class="page-title">Evento</div>
+        <div class="sos-button" id="sosButtonOpcoesEvento">SOS</div>
+
+        <div class="button-cadastrar-evento" id="buttonCadastrarEvento">
+            Cadastrar Evento
+        </div>
+
+        <div class="button-lista-eventos" id="buttonListaEventos">
+            Lista de Eventos
+        </div>
+
+        <div class="nav-container">
+            <img src="./img/back.svg" class="nav-icon" id="back-btn-opcoes-evento">
+            <img src="./img/home.svg" class="nav-icon"
+                id="home-btn-opcoes-evento">
+        </div>
+    </div>
+
+    <script>
+    // Sistema de Navegação entre páginas
+    function setPreviousPage() {
+        localStorage.setItem('previousPage', window.location.pathname);
+    }
+
+    function goBack() {
+        const previousPage = localStorage.getItem('previousPage');
+        if (previousPage && previousPage !== window.location.pathname) {
+            window.location.href = previousPage;
+        } else {
+            // Navegação interna entre telas
+            const currentScreen = document.querySelector('.screen:not(.hidden)').id;
+            const previousScreens = {
+                'opcao-screen': 'agenda-screen',
+                'opcoes-remedio-screen': 'opcao-screen',
+                'remedio-screen': 'opcoes-remedio-screen',
+                'remedio-lista-screen': 'opcoes-remedio-screen',
+                'opcoes-evento-screen': 'opcao-screen',
+                'evento-screen': 'opcoes-evento-screen',
+                'evento-lista-screen': 'opcoes-evento-screen'
+            };
+            
+            if (previousScreens[currentScreen]) {
+                navigateTo(previousScreens[currentScreen]);
+            } else {
+                window.history.back();
+            }
+        }
+    }
+
+    // Sistema de Navegação entre telas
+    function navigateTo(screenId) {
+        document.querySelectorAll('.screen').forEach(function(screen) {
+            screen.classList.add('hidden');
+        });
+        document.getElementById(screenId).classList.remove('hidden');
+        setPreviousPage(); // Atualiza a página anterior ao navegar
+    }
+
+    // Configuração dos botões de navegação
+    document.querySelectorAll('[id^="back-btn"]').forEach(function(btn) {
+        btn.addEventListener('click', goBack);
+    });
+
+    document.querySelectorAll('[id^="home-btn"]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            window.location.href = 'indexPessoal.html';
+        });
+    });
+
+    // Navegação principal
+    document.getElementById('compromissos-btn').addEventListener('click', function() {
+        navigateTo('opcao-screen');
+    });
+
+    document.getElementById('buttonRemdioContainer').addEventListener('click', function() {
+        navigateTo('opcoes-remedio-screen');
+    });
+
+    document.getElementById('buttonEventoContainer').addEventListener('click', function() {
+        navigateTo('opcoes-evento-screen');
+    });
+
+    // Navegação para telas de remédio
+    document.getElementById('buttonCadastrarRemedio').addEventListener('click', function() {
+        navigateTo('remedio-screen');
+    });
+
+    document.getElementById('buttonListaRemedios').addEventListener('click', function() {
+        navigateTo('remedio-lista-screen');
+    });
+
+    // Navegação para telas de evento
+    document.getElementById('buttonCadastrarEvento').addEventListener('click', function() {
+        navigateTo('evento-screen');
+    });
+
+    document.getElementById('buttonListaEventos').addEventListener('click', function() {
+        navigateTo('evento-lista-screen');
+    });
+
+    // Controle de frequência personalizada
+    document.getElementById('frequencia-remedio').addEventListener('change', function() {
+        const personalizadoContainer = document.querySelector('.frequencia-personalizada');
+        personalizadoContainer.style.display = this.value === 'personalizado' ? 'block' : 'none';
+    });
+
+    // Sistema de Armazenamento
+    let compromissos = JSON.parse(localStorage.getItem('compromissos')) || [];
+
+    document.getElementById('salvar-remedio').addEventListener('click', function() {
+        const nome = document.getElementById('nome-remedio').value;
+        const dose = document.getElementById('dose-remedio').value;
+        const tipoDose = document.getElementById('tipo-dose-remedio').value;
+        const frequencia = document.getElementById('frequencia-remedio').value;
+        const frequenciaPersonalizada = frequencia === 'personalizado'
+            ? document.getElementById('frequencia-personalizada-texto').value
+            : '';
+        const horario1 = document.getElementById('horario1-remedio').value;
+        const dataFinal = document.getElementById('data-final-remedio').value;
+        const lembrete = document.getElementById('lembrete-remedio').checked;
+
+        if (!nome || !dose || !horario1) {
+            alert('Preencha pelo menos nome, dose e horário!');
+            return;
+        }
+
+        const novoRemedio = {
+            tipo: 'remedio',
+            nome: nome,
+            dose: dose + ' ' + tipoDose,
+            frequencia: frequencia,
+            frequenciaPersonalizada: frequenciaPersonalizada,
+            horario1: horario1,
+            dataFinal: formatarData(dataFinal),
+            lembrete: lembrete,
+            dataCriacao: new Date().toISOString()
+        };
+
+        compromissos.push(novoRemedio);
+        localStorage.setItem('compromissos', JSON.stringify(compromissos));
+
+        // Limpa os campos
+        document.getElementById('nome-remedio').value = '';
+        document.getElementById('dose-remedio').value = '';
+        document.getElementById('tipo-dose-remedio').value = 'cápsula';
+        document.getElementById('frequencia-remedio').value = 'diariamente';
+        document.getElementById('frequencia-personalizada-texto').value = '';
+        document.getElementById('horario1-remedio').value = '';
+        document.getElementById('data-final-remedio').value = '';
+        document.getElementById('lembrete-remedio').checked = false;
+        document.querySelector('.frequencia-personalizada').style.display = 'none';
+
+        navigateTo('opcoes-remedio-screen');
+        atualizarListaCompromissos();
+        atualizarListaRemedios();
+    });
+
+    function formatarData(data) {
+        if (!data) return '';
+        const [ano, mes, dia] = data.split('-');
+        return `${dia}/${mes}/${ano}`;
+    }
+
+    function formatarHorario(horario) {
+        if (!horario) return '';
+        const [hora, minuto] = horario.split(':');
+        return `${hora}:${minuto}`;
+    }
+
+    function atualizarListaCompromissos() {
+        const lista = document.getElementById('lista-compromissos');
+        lista.innerHTML = '';
+
+        compromissos.sort((a, b) => new Date(a.dataCriacao) - new Date(b.dataCriacao));
+
+        compromissos.forEach(function(compromisso) {
+            const card = document.createElement('div');
+            card.className = 'compromisso-card';
+
+            if (compromisso.tipo === 'remedio') {
+                const frequenciaTexto = compromisso.frequencia === 'personalizado' && compromisso.frequenciaPersonalizada
+                    ? compromisso.frequenciaPersonalizada
+                    : compromisso.frequencia;
+
+                card.innerHTML = `
+                    <div class="compromisso-titulo">
+                        <img src="./img/pill.svg" class="compromisso-icone">
+                        ${compromisso.nome}
+                    </div>
+                    <div class="compromisso-info">${compromisso.dose}</div>
+                    <div class="compromisso-info">${frequenciaTexto}</div>
+                    <div class="compromisso-info">
+                        <span class="compromisso-data">
+                            ${formatarHorario(compromisso.horario1)}
+                        </span>
+                        ${compromisso.dataFinal ? ' | Até ' + compromisso.dataFinal : ''}
+                    </div>
+                `;
+            } else if (compromisso.tipo === 'evento') {
+                card.innerHTML = `
+                    <div class="compromisso-titulo">
+                        <img src="./img/date.svg" class="compromisso-icone">
+                        ${compromisso.nome}
+                    </div>
+                    <div class="compromisso-info">
+                        <span class="compromisso-data">
+                            ${compromisso.data} às ${compromisso.horario}
+                        </span>
+                    </div>
+                    ${compromisso.descricao ? `<div class="compromisso-info">${compromisso.descricao}</div>` : ''}
+                `;
+            }
+
+            lista.appendChild(card);
+        });
+    }
+
+    function atualizarListaRemedios() {
+        const lista = document.getElementById('lista-remedios');
+        lista.innerHTML = '';
+
+        compromissos.filter(c => c.tipo === 'remedio').forEach(function(remedio) {
+            const item = document.createElement('div');
+            item.className = 'remedio-item';
+
+            const frequenciaTexto = remedio.frequencia === 'personalizado' && remedio.frequenciaPersonalizada
+                ? remedio.frequenciaPersonalizada
+                : remedio.frequencia;
+
+            item.innerHTML = `
+                <div class="remedio-name">${remedio.nome}</div>
+                <div class="remedio-info">${remedio.dose}</div>
+                <div class="remedio-info">${frequenciaTexto}</div>
+                <div class="remedio-horario">
+                    <span class="remedio-data">${formatarHorario(remedio.horario1)}</span>
+                    ${remedio.dataFinal ? ' | Até ' + remedio.dataFinal : ''}
+                </div>
+                <div class="remedio-notificacao">Notificações ${remedio.lembrete ? 'ativas' : 'inativas'}</div>
+                <div class="excluir-remedio" data-id="${remedio.dataCriacao}">EXCLUIR REMÉDIO</div>
+            `;
+
+            item.querySelector('.excluir-remedio').addEventListener('click', function() {
+                excluirRemedio(remedio.dataCriacao);
+            });
+
+            lista.appendChild(item);
+        });
+    }
+
+    function excluirRemedio(id) {
+        if (confirm('Tem certeza que deseja excluir este remédio permanentemente?')) {
+            compromissos = compromissos.filter(item => item.dataCriacao !== id);
+            localStorage.setItem('compromissos', JSON.stringify(compromissos));
+
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = 'Remédio excluído com sucesso!';
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                document.body.removeChild(toast);
+            }, 3000);
+
+            atualizarListaRemedios();
+            atualizarListaCompromissos();
+        }
+    }
+
+    // Botão SOS
+    document.querySelectorAll('.sos-button').forEach(function(btn) {
+        btn.onclick = function() {
+            window.location.href = 'sos.html';
+        };
+    });
+
+    // Lembrete
+    document.getElementById('lembrete-remedio').addEventListener('change', function() {
+        const statusElement = document.getElementById('notificacao-status');
+        if (this.checked) {
+            statusElement.textContent = 'Notificação ativada✅';
+            statusElement.style.display = 'inline';
+        } else {
+            statusElement.style.display = 'none';
+        }
+    });
+
+    // Lembrete para eventos
+    document.getElementById('lembrete-evento').addEventListener('change', function() {
+        const statusElement = document.getElementById('notificacao-status-evento');
+        if (this.checked) {
+            statusElement.textContent = 'Notificação ativada✅';
+            statusElement.style.display = 'inline';
+        } else {
+            statusElement.style.display = 'none';
+        }
+    });
+
+    // Sistema de salvamento de eventos
+    document.getElementById('salvar-evento').addEventListener('click', function() {
+        const nome = document.getElementById('nome-evento').value;
+        const data = document.getElementById('data-evento').value;
+        const horario = document.getElementById('horario-evento').value;
+        const descricao = document.getElementById('descricao-evento').value;
+        const lembrete = document.getElementById('lembrete-evento').checked;
+
+        if (!nome || !data || !horario) {
+            alert('Preencha pelo menos nome, data e horário!');
+            return;
+        }
+
+        const novoEvento = {
+            tipo: 'evento',
+            nome: nome,
+            data: formatarData(data),
+            horario: formatarHorario(horario),
+            descricao: descricao,
+            lembrete: lembrete,
+            dataCriacao: new Date().toISOString()
+        };
+
+        compromissos.push(novoEvento);
+        localStorage.setItem('compromissos', JSON.stringify(compromissos));
+
+        // Limpa os campos
+        document.getElementById('nome-evento').value = '';
+        document.getElementById('data-evento').value = '';
+        document.getElementById('horario-evento').value = '';
+        document.getElementById('descricao-evento').value = '';
+        document.getElementById('lembrete-evento').checked = false;
+
+        navigateTo('opcoes-evento-screen');
+        atualizarListaCompromissos();
+        atualizarListaEventos();
+    });
+
+    function atualizarListaEventos() {
+        const lista = document.getElementById('lista-eventos');
+        lista.innerHTML = '';
+
+        compromissos.filter(c => c.tipo === 'evento').forEach(function(evento) {
+            const item = document.createElement('div');
+            item.className = 'remedio-item';
+
+            item.innerHTML = `
+                <div class="remedio-name">${evento.nome}</div>
+                <div class="remedio-info">${evento.data} às ${evento.horario}</div>
+                ${evento.descricao ? `<div class="remedio-info">${evento.descricao}</div>` : ''}
+                <div class="remedio-notificacao">Notificações ${evento.lembrete ? 'ativas' : 'inativas'}</div>
+                <div class="excluir-remedio" data-id="${evento.dataCriacao}">EXCLUIR EVENTO</div>
+            `;
+
+            item.querySelector('.excluir-remedio').addEventListener('click', function() {
+                excluirEvento(evento.dataCriacao);
+            });
+
+            lista.appendChild(item);
+        });
+    }
+
+    function excluirEvento(id) {
+        if (confirm('Tem certeza que deseja excluir este evento permanentemente?')) {
+            compromissos = compromissos.filter(item => item.dataCriacao !== id);
+            localStorage.setItem('compromissos', JSON.stringify(compromissos));
+
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = 'Evento excluído com sucesso!';
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                document.body.removeChild(toast);
+            }, 3000);
+
+            atualizarListaEventos();
+            atualizarListaCompromissos();
+        }
+    }
+
+    // Inicialização
+    window.addEventListener('load', function() {
+        setPreviousPage(); // Registra a página atual ao carregar
+        atualizarListaCompromissos();
+        atualizarListaRemedios();
+        atualizarListaEventos();
+    });
+</script>
 </body>
 
 </html>

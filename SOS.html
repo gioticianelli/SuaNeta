@@ -1,80 +1,216 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-  	<link rel="stylesheet"  href="./SOS/SOS.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" />
-  	
-  	
-  	
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+	<title>Emergência</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		body {
+			background-color: #fff8e1;
+		}
+
+		.sos-container {
+			width: 100%;
+			max-width: 431px;
+			margin: 0 auto;
+			position: relative;
+			height: 932px;
+			overflow-y: auto;
+			padding-bottom: 100px;
+		}
+
+		.nav-container {
+			position: fixed;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+			max-width: 431px;
+			height: 95px;
+			background-color: rgba(255, 217, 157, 0.61);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 100;
+		}
+
+		.nav-icon {
+			width: 70px;
+			height: 70px;
+			cursor: pointer;
+		}
+
+		.sos-header {
+			padding: 20px;
+		}
+
+		.sos-title {
+			font-size: 64px;
+			font-weight: 600;
+			color: #ee5c3b;
+			margin-bottom: 30px;
+		}
+
+		.add-contact-btn {
+			background-color: #d9d9d9;
+			border-radius: 20px;
+			padding: 8px 15px;
+			font-size: 20px;
+			font-weight: 600;
+			display: inline-flex;
+			align-items: center;
+			margin-bottom: 20px;
+			cursor: pointer;
+		}
+
+		.add-contact-btn img {
+			margin-left: 10px;
+			width: 20px;
+			height: 20px;
+		}
+
+		.section-title {
+			font-size: 20px;
+			font-weight: 600;
+			color: rgba(0, 0, 0, 0.47);
+			margin: 25px 20px 15px;
+		}
+
+		.contact-card {
+			background-color: rgba(255, 198, 157, 0.3);
+			border-radius: 10px;
+			margin: 0 20px 15px;
+			padding: 15px;
+			display: flex;
+			align-items: center;
+		}
+
+		.contact-card img {
+			width: 80px;
+			height: 80px;
+			margin-right: 15px;
+			object-fit: cover;
+		}
+
+		.contact-info {
+			flex: 1;
+		}
+
+		.contact-name {
+			font-size: 24px;
+			font-weight: 600;
+			color: #4a4a4a;
+		}
+
+		.contact-relation {
+			font-size: 20px;
+			color: rgba(74, 74, 74, 0.71);
+		}
+
+		.service-card {
+			background-color: rgba(255, 198, 157, 0.3);
+			border-radius: 10px;
+			margin: 0 20px 15px;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.service-card img {
+			width: 60px;
+			height: 60px;
+			margin-bottom: 10px;
+		}
+
+		.service-name {
+			font-size: 24px;
+			font-weight: 600;
+		}
+	</style>
 </head>
+
 <body>
-  	
-  	<div class="sos">
-    		
-    		<div class="sos-child">
-    		</div>
-    		<img class="home-icon" alt="" src="./SOS/home.svg" id="home">
-    		
-    		<div class="rectangle-parent">
-      			<div class="group-child">
-      			</div>
-      			<img class="vector-icon" alt="" src="./SOS/Vector.svg">
-      			
-      			<div class="adicionar">Adicionar</div>
-    		</div>
-    		<div class="rectangle-group">
-      			<div class="group-item">
-      			</div>
-      			<div class="neta">Neta</div>
-      			<img class="instagram-post-amarelo-ilustra-icon" alt="" src="./SOS/neta.svg">
-      			
-      			<div class="ana-clara-silva">Ana Clara Silva </div>
-    		</div>
-    		<div class="rectangle-container">
-      			<div class="group-inner">
-      			</div>
-      			<img class="instagram-post-amarelo-ilustra-icon1" alt="" src="./SOS/filha.svg">
-      			
-      			<div class="policia">Policia</div>
-    		</div>
-    		<div class="group-div">
-      			<div class="group-inner">
-      			</div>
-      			<img class="instagram-post-amarelo-ilustra-icon1" alt="" src="./SOS/policia.svg">
-      			<div class="policia">Bombeiros</div>
-    		</div>
-    		<div class="rectangle-parent1">
-      			<div class="group-inner">
-      			</div>
-      			<img class="instagram-post-amarelo-ilustra-icon1" alt="" src="./SOS/bombeiro.svg">
-      			
-      			<div class="policia">Samuel</div>
-      			<div class="mdico">Médico</div>
-    		</div>
-    		<div class="rectangle-parent2">
-      			<div class="group-item">
-      			</div>
-      			<div class="filha">Filha</div>
-      			<img class="instagram-post-amarelo-ilustra-icon4" alt="" src="./SOS/filha.svg">
-      			
-      			<div class="carla-almeida-silva">Carla Almeida Silva</div>
-    		</div>
-    		<div class="contatos-de-emergncia">Contatos de emergência</div>
-    		<div class="proteo">Proteção</div>
-    		<div class="sos1">sos</div>
-  	</div>
-  	
-  	
-  	
-  	
-  	<script>
-    		var home = document.getElementById("home");
-    		if(home) {
-      			home.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}</script></body>
+	<div class="sos-container">
+		<div class="sos-header">
+			<div class="sos-title">SOS</div>
+
+			<div class="add-contact-btn">
+				Adicionar
+				<img src="./img/plusSymbol.svg" alt="+">
+			</div>
+		</div>
+
+		<div class="section-title">Contatos de emergência</div>
+
+		<div class="contact-card">
+			<img src="./img/neta.svg" alt="Neta">
+			<div class="contact-info">
+				<div class="contact-name">Ana Clara Silva</div>
+				<div class="contact-relation">Neta</div>
+			</div>
+		</div>
+
+		<div class="contact-card">
+			<img src="./img/filha.svg" alt="Filha">
+			<div class="contact-info">
+				<div class="contact-name">Carla Almeida Silva</div>
+				<div class="contact-relation">Filha</div>
+			</div>
+		</div>
+
+		<div class="section-title">Proteção</div>
+
+		<div class="service-card">
+			<img src="./img/policia.svg" alt="Polícia">
+			<div class="service-name">Polícia</div>
+		</div>
+
+		<div class="service-card">
+			<img src="./img/bombeiro.svg" alt="Bombeiros">
+			<div class="service-name">Bombeiros</div>
+		</div>
+
+		<div class="contact-card">
+			<img src="./img/medico.svg" alt="Médico">
+			<div class="contact-info">
+				<div class="contact-name">Samuel</div>
+				<div class="contact-relation">Médico</div>
+			</div>
+		</div>
+
+		<div class="nav-container">
+			<img src="./img/home.svg" class="nav-icon" id="home">
+		</div>
+	</div>
+
+	<script>
+		document.getElementById('home').addEventListener('click', function () {
+			window.location.href = 'indexPessoal.html'; // Alteração feita aqui
+		});
+
+		// Adicione aqui a lógica para fazer ligações quando os contatos forem clicados
+		document.querySelectorAll('.contact-card, .service-card').forEach(card => {
+			card.addEventListener('click', function () {
+				// Exemplo: window.location.href = 'tel:+5511999999999';
+				const name = this.querySelector('.contact-name')?.textContent ||
+					this.querySelector('.service-name').textContent;
+				alert('Ligando para ' + name);
+			});
+		});
+
+		document.querySelector('.add-contact-btn').addEventListener('click', function () {
+			alert('Funcionalidade de adicionar contato será implementada aqui');
+		});
+	</script>
+	</script>
+</body>
+
 </html>
