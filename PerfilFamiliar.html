@@ -194,7 +194,7 @@
 		<div class="permission-item">
 			<span class="permission-text">Alterações na agenda</span>
 			<label class="toggle-switch">
-				<input type="checkbox" class="toggle-checkbox" checked>
+				<input type="checkbox" class="toggle-checkbox">
 				<span class="toggle-slider"></span>
 			</label>
 		</div>
@@ -210,7 +210,7 @@
 		<div class="permission-item">
 			<span class="permission-text">Acesso ao perfil do familiar</span>
 			<label class="toggle-switch">
-				<input type="checkbox" class="toggle-checkbox" checked>
+				<input type="checkbox" class="toggle-checkbox">
 				<span class="toggle-slider"></span>
 			</label>
 		</div>
@@ -240,7 +240,58 @@
 
 	<script>
 		class PermissionSystem {
-			// ... (mantenha a classe PermissionSystem EXATAMENTE IGUAL à do outro arquivo)
+			constructor() {
+				this.loadPermissions();
+			}
+
+			loadPermissions() {
+				const savedPermissions = localStorage.getItem('familyPermissions');
+				if (savedPermissions) {
+					this.permissions = JSON.parse(savedPermissions);
+				} else {
+					// Permissões padrão
+					this.permissions = {
+						elderProfile: {
+							name: "Maria Aparecida da Silva",
+							photo: "path/to/photo.jpg"
+						},
+						members: {
+							'ana-clara-silva': {
+								name: "Ana Clara Silva",
+								relation: "Neta",
+								permissions: {
+									agenda: false,
+									notifications: false,
+									profileAccess: false,
+									passwordAccess: false,
+									progressAccess: true,  // Apenas progresso ativado
+									familyControl: false
+								}
+							}
+						},
+						lastUpdate: Date.now()
+					};
+					this.savePermissions();
+				}
+			}
+
+			savePermissions() {
+				this.permissions.lastUpdate = Date.now();
+				localStorage.setItem('familyPermissions', JSON.stringify(this.permissions));
+				// Dispara evento para outras abas/páginas
+				window.dispatchEvent(new Event('storage'));
+			}
+
+			getPermissions() {
+				return this.permissions;
+			}
+
+			updatePermission(memberId, permission, value) {
+				if (this.permissions.members[memberId]) {
+					this.permissions.members[memberId].permissions[permission] = value;
+					this.savePermissions();
+				}
+			}
 		}
 
 		const permissionSystem = new PermissionSystem();
@@ -282,7 +333,7 @@
 			checkbox.addEventListener('click', function (e) {
 				if (!hasControlPermission) {
 					e.preventDefault();
-					alert("Você não tem permissão para alterar configurações. Peça ao idoso para ativar 'Alterações no controle familiar' no seu perfil.");
+					alert("Você não tem permissão para alterar configurações. Peça ao idoso para conceder permissões no seu perfil.");
 					this.checked = !this.checked; // Mantém o estado anterior
 				}
 			});
@@ -293,7 +344,7 @@
 
 		// Atualiza quando há mudanças
 		window.addEventListener('storage', (event) => {
-			if (event.key === 'lastUpdate') {
+			if (event.key === 'familyPermissions' || event.key === 'lastUpdate') {
 				loadPermissions();
 			}
 		});

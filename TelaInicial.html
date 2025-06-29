@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet" />
+    <style>
+        /* Reset e estilos globais */
+        * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            margin: 0;
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Tela Inicial */
+        #telaInicial {
+            background-color: #fefaf4;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: block;
+        }
+
+        #telaInicial .div {
+            background-color: #fefaf4;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        #telaInicial .overlap-group {
+            position: absolute;
+            width: 271px;
+            height: 271px;
+            top: 347px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #telaInicial .imagem-do-whatsapp {
+            position: absolute;
+            width: 271px;
+            height: 271px;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            border-radius: 60px;
+        }
+
+        #telaInicial .text-wrapper {
+            position: absolute;
+            width: 359px;
+            height: 92px;
+            top: 674px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 800;
+            color: #f29985;
+            font-size: 36px;
+            text-align: center;
+            letter-spacing: 0;
+            line-height: 30px;
+        }
+
+        /* Tela de Escolha */
+        #telaEscolha {
+            background-color: #f5f5f5;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: none;
+        }
+
+        .escolha-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .titulo-escolha {
+            font-size: 36px;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 60px;
+        }
+
+        .opcoes-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .opcao-btn {
+            border: none;
+            border-radius: 15px;
+            padding: 20px 30px;
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #btnFamiliar {
+            background-color: #81C4F9;
+        }
+
+        #btnPessoal {
+            background-color: #e9a47c;
+        }
+
+        .opcao-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .opcao-btn img {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Tela Familiar - MODIFICADA */
+        #telaFamiliar {
+            background-color: #fefaf4;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 36px;
+            color: #f29985;
+        }
+
+        /* REMOVIDO: .splash3-child (quadrado rosa) */
+
+        #telaFamiliar .imagem-do-whatsapp-de-2025-04- {
+            position: absolute;
+            top: 347px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 60px;
+            width: 271px;
+            height: 271px;
+            object-fit: cover;
+        }
+
+        #telaFamiliar .a-assistncia-que {
+            position: absolute;
+            top: 675px;
+            left: 50%;
+            transform: translateX(-50%);
+            line-height: 30px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 359px;
+            height: 92px;
+        }
+
+        #telaFamiliar .icon-park-outlinefamily {
+            position: absolute;
+            top: 454px;
+            left: 203px;
+            width: 24px;
+            height: 24px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tela Inicial -->
+    <div id="telaInicial">
+        <div class="div">
+            <div class="overlap-group">
+                <img class="imagem-do-whatsapp" src="./img/vovo03.png" />
+            </div>
+            <p class="text-wrapper">Assistência como só sua neta faria.</p>
+        </div>
+    </div>
+    
+    <!-- Tela de Escolha -->
+    <div id="telaEscolha">
+        <div class="escolha-container">
+            <div class="titulo-escolha">Escolha uma opção</div>
+            <div class="opcoes-container">
+                <button class="opcao-btn" id="btnFamiliar">
+                    <img src="./img/GroupEscolha.png" alt="Ícone Familiar">
+                    Familiar
+                </button>
+                <button class="opcao-btn" id="btnPessoal">
+                    <img src="./img/personEscolha.png" alt="Ícone Pessoal">
+                    Pessoal
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tela Familiar MODIFICADA -->
+    <div id="telaFamiliar">
+        <!-- REMOVIDO: <div class="splash3-child"></div> (quadrado rosa) -->
+        <img class="imagem-do-whatsapp-de-2025-04-" alt="" src="./img/vovoFamiliar.png">
+        <div class="a-assistncia-que">A assistência que sua vó merece!</div>
+        <div class="icon-park-outlinefamily"></div>
+    </div>
+    
+    <script>
+        // Tempo em milissegundos para as transições
+        const tempoTransicao = 5000; // 5 segundos
+        
+        // Elementos das telas
+        const telaInicial = document.getElementById('telaInicial');
+        const telaEscolha = document.getElementById('telaEscolha');
+        const telaFamiliar = document.getElementById('telaFamiliar');
+        const btnFamiliar = document.getElementById('btnFamiliar');
+        const btnPessoal = document.getElementById('btnPessoal');
+        
+        // Transição da tela inicial para a tela de escolha após 5 segundos
+        setTimeout(() => {
+            telaInicial.style.display = 'none';
+            telaEscolha.style.display = 'block';
+        }, tempoTransicao);
+        
+        // Evento para o botão Familiar
+        btnFamiliar.addEventListener('click', () => {
+            telaEscolha.style.display = 'none';
+            telaFamiliar.style.display = 'block';
+            
+            // Redireciona após 5 segundos
+            setTimeout(() => {
+                window.location.href = 'indexFamiliar.html';
+            }, tempoTransicao);
+        });
+        
+        // Evento para o botão Pessoal
+        btnPessoal.addEventListener('click', () => {
+            // Redireciona diretamente para a página pessoal
+            window.location.href = 'IndexPessoal.html';
+        });
+        
+        // Evento para a tela familiar (caso o usuário clique antes dos 5 segundos)
+        telaFamiliar.addEventListener('click', () => {
+            window.location.href = 'indexFamiliar.html';
+        });
+    </script>
+</body>
+</html>

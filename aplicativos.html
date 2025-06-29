@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo - O que você quer fazer?</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #FFF8E1;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 430px;
+            height: 932px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .title {
+            position: absolute;
+            top: 180px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            color: #4A4A4A;
+            font-weight: 600;
+            text-align: center;
+            width: 100%;
+            padding: 0 20px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .button {
+            position: absolute;
+            width: 362px;
+            height: 107px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .button:hover {
+            transform: translateX(-50%) scale(1.02);
+        }
+
+        .button:active {
+            transform: translateX(-50%) scale(0.98);
+        }
+
+        .open-btn {
+            top: 303px;
+            background-color: rgba(245, 197, 24, 0.46);
+        }
+
+        .search-btn {
+            top: 430px;
+            background-color: rgba(255, 217, 157, 0.61);
+        }
+
+        .button-text {
+            font-size: 40px;
+            font-weight: 600;
+            color: #4A4A4A;
+        }
+
+        .button-icon {
+            width: 76px;
+            height: 76px;
+        }
+
+        .open-btn .button-icon {
+            width: 99px;
+            height: 99px;
+        }
+
+        .nav-buttons {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 95px;
+            background-color: rgba(255, 217, 157, 0.61);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .nav-icon {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-icon:active {
+            transform: scale(0.95);
+        }
+
+        .sos-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 98px;
+            height: 44px;
+            background-color: #EE5C3B;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 36px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .sos-btn:hover {
+            background-color: #FF4D2B;
+            transform: scale(1.05);
+        }
+
+        .sos-btn:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -20px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @keyframes buttonFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .open-btn {
+            animation: buttonFadeIn 0.6s ease-out 0.2s both;
+        }
+
+        .search-btn {
+            animation: buttonFadeIn 0.6s ease-out 0.4s both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">O que você quer fazer?</h1>
+        
+        <div class="button open-btn" id="openBtn">
+            <span class="button-text">Abrir</span>
+            <img src="./img/hand-click.svg" alt="Abrir" class="button-icon">
+        </div>
+        
+        <div class="button search-btn" id="searchBtn">
+            <span class="button-text">Pesquisar</span>
+            <img src="./img/microphone-apps.svg" alt="Pesquisar" class="button-icon">
+        </div>
+        
+        <div class="sos-btn" id="sosBtn">SOS</div>
+        
+        <div class="nav-buttons">
+            <img src="./img/back.svg" alt="Voltar" class="nav-icon" id="backBtn">
+            <img src="./img/home.svg" alt="Home" class="nav-icon" id="homeBtn">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Botão Abrir
+            const openBtn = document.getElementById('openBtn');
+            openBtn.addEventListener('click', function() {
+                this.style.transform = 'translateX(-50%) scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'translateX(-50%) scale(1)';
+                    // Aqui você pode adicionar a ação desejada para "Abrir"
+                    alert('Funcionalidade "Abrir" será implementada aqui');
+                    // Ou redirecionar para outra página:
+                    // window.location.href = "abrir.html";
+                }, 100);
+            });
+
+            // Botão Pesquisar
+            const searchBtn = document.getElementById('searchBtn');
+            searchBtn.addEventListener('click', function() {
+                this.style.transform = 'translateX(-50%) scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'translateX(-50%) scale(1)';
+                    // Aqui você pode adicionar a ação desejada para "Pesquisar"
+                    alert('Funcionalidade "Pesquisar" será implementada aqui');
+                    // Ou redirecionar para outra página:
+                    // window.location.href = "pesquisar.html";
+                }, 100);
+            });
+
+            // Botão SOS
+            const sosBtn = document.getElementById('sosBtn');
+            sosBtn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    window.location.href = 'SOS.html';
+                }, 100);
+            });
+
+            // Botão Voltar
+            const backBtn = document.getElementById('backBtn');
+            backBtn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    window.history.back();
+                }, 100);
+            });
+
+            // Botão Home
+            const homeBtn = document.getElementById('homeBtn');
+            homeBtn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    window.location.href = 'indexPessoal.html';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

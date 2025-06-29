@@ -140,7 +140,7 @@
             </div>
 
             <div class="menu-grid">
-                <a href="Agenda.html" class="menu-item">
+                <a href="#" class="menu-item" id="agenda-link">
                     <div class="icon-container">
                         <img class="menu-icon" src="./IndexFamiliar/ph_calendar.svg" />
                     </div>
@@ -154,7 +154,7 @@
                     <div class="menu-label">Perfil</div>
                 </a>
 
-                <a href="CofreSenhas.html" class="menu-item">
+                <a href="#" class="menu-item" id="cofre-link">
                     <div class="icon-container">
                         <img class="menu-icon" src="./IndexFamiliar/mingcute_lock-line.svg" />
                     </div>
@@ -182,6 +182,17 @@
                         this.style.transform = 'scale(1)';
                     }, 200);
                 });
+            });
+
+            // Adiciona o evento de clique para exibir a mensagem de acesso negado
+            document.getElementById('agenda-link').addEventListener('click', function(e) {
+                e.preventDefault(); // Impede o redirecionamento
+                alert('Acesso negado! Você não tem permissão para acessar esse conteúdo.');
+            });
+
+            document.getElementById('cofre-link').addEventListener('click', function(e) {
+                e.preventDefault(); // Impede o redirecionamento
+                alert('Acesso negado! Você não tem permissão para acessar esse conteúdo.');
             });
         });
     </script>

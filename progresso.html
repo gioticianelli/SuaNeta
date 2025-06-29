@@ -3,60 +3,364 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="./progresso/progresso.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+        <style>
+            * {
+                -webkit-font-smoothing: antialiased;
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                margin: 0px;
+                height: 100%;
+                font-family: 'Roboto', sans-serif;
+            }
+            /* a blue color as a generic focus style */
+            button:focus-visible {
+                outline: 2px solid #4a90e2 !important;
+                outline: -webkit-focus-ring-color auto 5px !important;
+            }
+            a {
+                text-decoration: none;
+            }
+            .progresso {
+                background-color: #fff8e1;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                min-height: 100vh;
+            }
+
+            .progresso .div {
+                background-color: #fff8e1;
+                overflow-y: auto;
+                overflow-x: hidden;
+                width: 431px;
+                height: 100vh;
+                position: relative;
+                padding-bottom: 120px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .title {
+                font-family: "Roboto", sans-serif;
+                font-weight: 600;
+                color: #4a4a4a;
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+
+            .notification-container {
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            .notification-text {
+                font-family: "Roboto", sans-serif;
+                font-weight: 600;
+                color: #4a4a4ab5;
+                font-size: 24px;
+                margin-right: 15px;
+            }
+
+            .toggle-switch {
+                position: relative;
+                width: 50px;
+                height: 30px;
+            }
+
+            .toggle-checkbox {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .toggle-slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #666363;
+                transition: .4s;
+                border-radius: 15px;
+            }
+
+            .toggle-slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 2px;
+                bottom: 2px;
+                background-color: white;
+                transition: .4s;
+                border-radius: 50%;
+            }
+
+            .toggle-checkbox:checked + .toggle-slider {
+                background-color: #4CAF50;
+            }
+
+            .toggle-checkbox:checked + .toggle-slider:before {
+                transform: translateX(20px);
+            }
+
+            .achievement-list {
+                padding: 0 20px;
+                margin-top: 20px;
+            }
+
+            .achievement-item {
+                background-color: white;
+                border-radius: 10px;
+                padding: 15px;
+                margin-bottom: 15px;
+                position: relative;
+                padding-left: 60px;
+                min-height: 70px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+
+            .achievement-icon {
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                width: 36px;
+                height: 36px;
+            }
+
+            .achievement-title {
+                font-family: "Roboto", sans-serif;
+                font-weight: 600;
+                color: #4a4a4a;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            .achievement-date {
+                font-family: "Roboto", sans-serif;
+                font-weight: 600;
+                color: #4a4a4a99;
+                font-size: 14px;
+            }
+
+            .navigation-bar {
+                position: fixed;
+                bottom: 0;
+                width: 431px;
+                height: 95px;
+                background-color: #ffd99d9c;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                z-index: 100;
+            }
+
+            .back-button, .home-button {
+                width: 70px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .back-button {
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234a4a4a"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>');
+                background-size: 50% 50%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .home-button {
+                background-color: #fff8e1;
+                border-radius: 35px;
+            }
+
+            .home-icon {
+                width: 40px;
+                height: 40px;
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234a4a4a"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            /* Animations */
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .fade-in {
+                animation: fadeIn 0.5s ease forwards;
+            }
+
+            .delay-1 { animation-delay: 0.1s; }
+            .delay-2 { animation-delay: 0.2s; }
+            .delay-3 { animation-delay: 0.3s; }
+            .delay-4 { animation-delay: 0.4s; }
+            .delay-5 { animation-delay: 0.5s; }
+
+            /* Scrollbar styling */
+            .progresso .div::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            .progresso .div::-webkit-scrollbar-track {
+                background: #fff8e1;
+            }
+
+            .progresso .div::-webkit-scrollbar-thumb {
+                background-color: #ffd99d;
+                border-radius: 20px;
+            }
+        </style>
     </head>
     <body>
         <div class="progresso">
             <div class="div">
-                <div class="overlap">
+                <div class="header">
+                    <div class="title">Progresso e Conquistas</div>
+                    <div class="notification-container">
+                        <div class="notification-text">Notificações</div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" class="toggle-checkbox" id="notificationToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
 
-                    <div class="text-wrapper">Adicionou o 1° remédio</div>
-                    <div class="text-wrapper-2">19/04/2025</div>
-                    <div class="text-wrapper">Adicionou o 1° remédio</div>
-                    <img class="vector" src="./progresso/medalha.svg" />
-                </div>
-                <div class="overlap-group">
-                    <div class="text-wrapper-3">Progresso e Conquistas</div>
-                    <div class="text-wrapper-4">Notificações</div>
-                    <div class="component"><div class="ellipse"></div></div>
-                </div>
-                <a href="indexFamiliar.html">
-					<div class="overlap-2">
-                    <div class="back"><img class="img" src="./progresso/back.svg" /></div>
-                    <div class="home"><img class="material-symbols" src="./progresso/home.svg" /></div>
-                </div>
-				</a>
-                <div class="group">
-                    <div class="overlap-group-2">
-                        <p class="text-wrapper-5">Completou “ir a comprar maças”</p>
-                        <div class="text-wrapper-6">28/03/2025</div>
-                        <img class="vector" src="./progresso/medalha.svg" />
-                    </div>
-                </div>
-                <div class="overlap-wrapper">
-                    <div class="overlap-group-2">
-                        <div class="text-wrapper-5">Instalou o “Tiktok”</div>
-                        <div class="text-wrapper-6">01/04/2025</div>
-                        <img class="vector" src="./progresso/medalha.svg" />
-                    </div>
-                </div>
-                <div class="overlap-group-wrapper">
-                    <div class="overlap-3">
-                        <div class="overlap-group-3">
-                            <p class="p">Completou o aprendizdo em “Como gravar um áudio no whatsapp”</p>
-                            <div class="text-wrapper-7">12/04/2025</div>
+                <div class="achievement-list">
+                    <div class="achievement-item fade-in delay-1">
+                        <div class="achievement-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700">
+                                <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                            </svg>
                         </div>
-                        <img class="mdi-achievement" src="./progresso/trofeu.svg" />
+                        <div class="achievement-content">
+                            <div class="achievement-title">Adicionou o 1° remédio</div>
+                            <div class="achievement-date">10/04/2025</div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-item fade-in delay-3">
+                        <div class="achievement-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4a90e2">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                        </div>
+                        <div class="achievement-content">
+                            <div class="achievement-title">Completou o aprendizado em "Como gravar um áudio no whatsapp"</div>
+                            <div class="achievement-date">12/04/2025</div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-item fade-in delay-2">
+                        <div class="achievement-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700">
+                                <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                            </svg>
+                        </div>
+                        <div class="achievement-content">
+                            <div class="achievement-title">Instalou o "Tiktok"</div>
+                            <div class="achievement-date">01/04/2025</div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-item fade-in delay-4">
+                        <div class="achievement-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD700">
+                                <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/>
+                            </svg>
+                        </div>
+                        <div class="achievement-content">
+                            <div class="achievement-title">Completou "Ir a comprar maças"</div>
+                            <div class="achievement-date">28/03/2025</div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-item fade-in delay-5">
+                        <div class="achievement-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4a90e2">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                        </div>
+                        <div class="achievement-content">
+                            <div class="achievement-title">Iniciou o estudo em "Como gravar um áudio no whatsapp?"</div>
+                            <div class="achievement-date">20/03/2025</div>
+                        </div>
                     </div>
                 </div>
-                <div class="div-wrapper">
-                    <div class="overlap-4">
-                        <p class="text-wrapper-8">Iniciou a o estudo em “Como gravar um áudio no whatsapp?”</p>
-                        <div class="text-wrapper-9">20/03/2025</div>
-                        <img class="mdi-achievement" src="./progresso/trofeu.svg" />
-                    </div>
+
+                <div class="navigation-bar">
+                    <a href="javascript:history.back()" class="back-button"></a>
+                    <a href="indexFamiliar.html" class="home-button">
+                        <div class="home-icon"></div>
+                    </a>
                 </div>
             </div>
         </div>
+
+        <script>
+            // Toggle de notificações
+            document.getElementById('notificationToggle').addEventListener('change', function() {
+                // Mostrar feedback visual
+                if (this.checked) {
+                    showToast('Notificações ativadas');
+                } else {
+                    showToast('Notificações desativadas');
+                }
+            });
+
+            // Função para mostrar toast messages
+            function showToast(message) {
+                const toast = document.createElement('div');
+                toast.textContent = message;
+                toast.style.position = 'fixed';
+                toast.style.bottom = '120px';
+                toast.style.left = '50%';
+                toast.style.transform = 'translateX(-50%)';
+                toast.style.backgroundColor = '#4a4a4a';
+                toast.style.color = 'white';
+                toast.style.padding = '10px 20px';
+                toast.style.borderRadius = '20px';
+                toast.style.zIndex = '1000';
+                toast.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+                toast.style.animation = 'fadeIn 0.3s, fadeOut 0.3s 2s forwards';
+                
+                document.body.appendChild(toast);
+                
+                setTimeout(() => {
+                    toast.remove();
+                }, 2300);
+            }
+
+            // Adiciona animação de fadeOut
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeOut {
+                    from { opacity: 1; }
+                    to { opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Efeito de carregamento para os itens
+            document.addEventListener('DOMContentLoaded', function() {
+                const items = document.querySelectorAll('.achievement-item');
+                items.forEach((item, index) => {
+                    item.style.animationDelay = `${index * 0.1}s`;
+                });
+            });
+        </script>
     </body>
 </html>

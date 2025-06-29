@@ -152,6 +152,8 @@
             font-size: 24px;
             color: #4a4a4a;
             cursor: pointer;
+            background: none;
+            border: none;
         }
 
         .member-header {
@@ -244,11 +246,11 @@
             border-radius: 50%;
         }
 
-        input:checked+.slider {
+        input:checked + .slider {
             background-color: #4CAF50;
         }
 
-        input:checked+.slider:before {
+        input:checked + .slider:before {
             transform: translateX(20px);
         }
 
@@ -371,17 +373,17 @@
         <div id="memberDetail" class="member-detail">
             <div class="detail-header">
                 <button class="back-button" id="detailBackButton">
-                    <img src="./img/back.svg" alt="Voltar" class="nav-icon">
+                    <i class="fas fa-arrow-left"></i>
                 </button>
                 <div class="header-title">Configurações</div>
                 <div style="width: 40px;"></div> <!-- Espaço vazio para alinhamento -->
             </div>
 
             <div class="member-header">
-                <img src="./img/AnaClara.svg" alt="Ana Clara" class="member-detail-avatar">
+                <img src="./img/AnaClara.svg" alt="Ana Clara" class="member-detail-avatar" id="detailAvatar">
                 <div>
-                    <div class="member-detail-name">Ana Clara Silva</div>
-                    <div class="member-detail-relation">Neta</div>
+                    <div class="member-detail-name" id="detailName">Ana Clara Silva</div>
+                    <div class="member-detail-relation" id="detailRelation">Neta</div>
                 </div>
             </div>
 
@@ -391,7 +393,7 @@
                 <div class="permission-item">
                     <span class="permission-name">Alterações na agenda</span>
                     <label class="toggle-switch">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" id="agendaPermission">
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -399,7 +401,7 @@
                 <div class="permission-item">
                     <span class="permission-name">Notificações em tempo real</span>
                     <label class="toggle-switch">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" id="notificationsPermission">
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -407,7 +409,7 @@
                 <div class="permission-item">
                     <span class="permission-name">Alterações no controle familiar</span>
                     <label class="toggle-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" id="familyControlPermission">
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -415,7 +417,7 @@
                 <div class="permission-item">
                     <span class="permission-name">Acesso ao seu perfil</span>
                     <label class="toggle-switch">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" id="profileAccessPermission">
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -423,7 +425,7 @@
                 <div class="permission-item">
                     <span class="permission-name">Acesso ao cofre de senhas</span>
                     <label class="toggle-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" id="passwordAccessPermission">
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -431,29 +433,29 @@
                 <div class="permission-item">
                     <span class="permission-name">Acesso ao progresso</span>
                     <label class="toggle-switch">
-                        <input type="checkbox">
+                        <input type="checkbox" id="progressAccessPermission">
                         <span class="slider"></span>
                     </label>
                 </div>
             </div>
 
             <div class="action-buttons">
-                <div class="action-button remove-button" id="removeMemberBtn">
+                <button class="action-button remove-button" id="removeMemberBtn">
                     Remover Membro
-                </div>
-                <div class="action-button save-button" id="savePermissionsBtn">
+                </button>
+                <button class="action-button save-button" id="savePermissionsBtn">
                     Salvar Alterações
-                </div>
+                </button>
             </div>
         </div>
 
         <!-- Barra de navegação -->
         <div class="nav-bar">
             <button class="nav-button" id="backButton">
-                <img src="./img/back.svg" alt="Voltar" class="nav-icon">
+                <i class="fas fa-arrow-left"></i>
             </button>
             <a href="indexPessoal.html" class="nav-button">
-                <img src="./img/home.svg" alt="Início" class="nav-icon">
+                <i class="fas fa-home"></i>
             </a>
         </div>
     </div>
@@ -495,6 +497,19 @@
                                     passwordAccess: true,
                                     progressAccess: true
                                 }
+                            },
+                            rubiao: {
+                                name: "Rubião Matos Silveira",
+                                relation: "Sobrinho",
+                                avatar: "./img/rubiao.svg",
+                                permissions: {
+                                    agenda: false,
+                                    notifications: false,
+                                    familyControl: false,
+                                    profileAccess: false,
+                                    passwordAccess: false,
+                                    progressAccess: true
+                                }
                             }
                         },
                         elderProfile: {
@@ -528,47 +543,107 @@
             }
         }
 
-        // Código específico da página
+        // Elementos da interface
+        const familyControl = document.getElementById('familyControl');
+        const memberDetail = document.getElementById('memberDetail');
+        const detailBackButton = document.getElementById('detailBackButton');
+        const savePermissionsBtn = document.getElementById('savePermissionsBtn');
+        const removeMemberBtn = document.getElementById('removeMemberBtn');
+        const backButton = document.getElementById('backButton');
+
+        // Elementos de detalhes do membro
+        const detailAvatar = document.getElementById('detailAvatar');
+        const detailName = document.getElementById('detailName');
+        const detailRelation = document.getElementById('detailRelation');
+
+        // Elementos de permissões
+        const agendaPermission = document.getElementById('agendaPermission');
+        const notificationsPermission = document.getElementById('notificationsPermission');
+        const familyControlPermission = document.getElementById('familyControlPermission');
+        const profileAccessPermission = document.getElementById('profileAccessPermission');
+        const passwordAccessPermission = document.getElementById('passwordAccessPermission');
+        const progressAccessPermission = document.getElementById('progressAccessPermission');
+
+        // Inicialização do sistema
         const permissionSystem = new PermissionSystem();
         let currentMemberId = null;
 
+        // Função para voltar à lista de membros
+        function backToList() {
+            familyControl.style.display = "block";
+            memberDetail.style.display = "none";
+            currentMemberId = null;
+        }
+
         // Mostrar detalhes do membro
         document.querySelectorAll(".family-member").forEach(member => {
-            member.addEventListener("click", function () {
+            member.addEventListener("click", function() {
                 currentMemberId = this.getAttribute("data-member");
-                const member = permissionSystem.getPermissions().members[currentMemberId];
+                const permissions = permissionSystem.getPermissions();
+                const memberData = permissions.members[currentMemberId];
 
-                document.querySelector(".member-detail-name").textContent = member.name;
-                document.querySelector(".member-detail-relation").textContent = member.relation;
+                // Atualizar informações do membro
+                detailName.textContent = memberData.name;
+                detailRelation.textContent = memberData.relation;
+                detailAvatar.src = memberData.avatar;
 
-                document.querySelectorAll(".permission-item input")[0].checked = member.permissions.agenda;
-                document.querySelectorAll(".permission-item input")[1].checked = member.permissions.notifications;
-                document.querySelectorAll(".permission-item input")[2].checked = member.permissions.familyControl;
-                document.querySelectorAll(".permission-item input")[3].checked = member.permissions.profileAccess;
-                document.querySelectorAll(".permission-item input")[4].checked = member.permissions.passwordAccess;
-                document.querySelectorAll(".permission-item input")[5].checked = member.permissions.progressAccess;
+                // Atualizar permissões
+                agendaPermission.checked = memberData.permissions.agenda;
+                notificationsPermission.checked = memberData.permissions.notifications;
+                familyControlPermission.checked = memberData.permissions.familyControl;
+                profileAccessPermission.checked = memberData.permissions.profileAccess;
+                passwordAccessPermission.checked = memberData.permissions.passwordAccess;
+                progressAccessPermission.checked = memberData.permissions.progressAccess;
 
+                // Mostrar detalhes e esconder lista
                 familyControl.style.display = "none";
                 memberDetail.style.display = "block";
             });
         });
 
         // Salvar alterações
-        document.getElementById("savePermissionsBtn").addEventListener("click", function () {
-            const permissions = permissionSystem.getPermissions();
+        savePermissionsBtn.addEventListener("click", function() {
+            if (!currentMemberId) return;
 
+            const permissions = permissionSystem.getPermissions();
+            
             permissions.members[currentMemberId].permissions = {
-                agenda: document.querySelectorAll(".permission-item input")[0].checked,
-                notifications: document.querySelectorAll(".permission-item input")[1].checked,
-                familyControl: document.querySelectorAll(".permission-item input")[2].checked,
-                profileAccess: document.querySelectorAll(".permission-item input")[3].checked,
-                passwordAccess: document.querySelectorAll(".permission-item input")[4].checked,
-                progressAccess: document.querySelectorAll(".permission-item input")[5].checked
+                agenda: agendaPermission.checked,
+                notifications: notificationsPermission.checked,
+                familyControl: familyControlPermission.checked,
+                profileAccess: profileAccessPermission.checked,
+                passwordAccess: passwordAccessPermission.checked,
+                progressAccess: progressAccessPermission.checked
             };
 
             permissionSystem.updatePermissions(permissions);
             alert("Permissões atualizadas com sucesso!");
             backToList();
+        });
+
+        // Remover membro
+        removeMemberBtn.addEventListener("click", function() {
+            if (!currentMemberId) return;
+
+            if (confirm(`Tem certeza que deseja remover ${detailName.textContent} da sua família?`)) {
+                const permissions = permissionSystem.getPermissions();
+                delete permissions.members[currentMemberId];
+                permissionSystem.updatePermissions(permissions);
+                alert("Membro removido com sucesso!");
+                backToList();
+                location.reload(); // Recarregar a página para atualizar a lista
+            }
+        });
+
+        // Botões de voltar
+        detailBackButton.addEventListener("click", backToList);
+        backButton.addEventListener("click", function() {
+            window.history.back();
+        });
+
+        // Botão Adicionar Membro
+        document.getElementById("addMemberBtn").addEventListener("click", function() {
+            alert("Funcionalidade de adicionar membro será implementada aqui");
         });
     </script>
 </body>
