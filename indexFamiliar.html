@@ -1,48 +1,189 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="./IndexFamiliar/indexFamiliar.css" />
-    </head>
-    <body>
-        <div class="index-familiar">
-            <div class="div">
-                <img class="mask-group" src="./IndexFamiliar/Captura de tela 2025-04-13 205732 1.png" />
-                <a href="Agenda.html">
-					<div class="group">
-                    <div class="frame"><img class="ph-calendar" src="./IndexFamiliar/ph_calendar.svg" /></div>
-                    <div class="text-wrapper">Agenda</div>
-                </div>
-				</a>
-                <a href="progresso.html">
-					<div class="overlap-group-wrapper">
-                    <div class="overlap-group">
-                        <div class="material-symbols-wrapper">
-                            <div class="material-symbols"><img class="tabler-progress" src="./IndexFamiliar/tabler_progress.svg" /></div>
-                        </div>
-                        <div class="text-wrapper-2">Progresso e Conquistas</div>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./IndexFamiliar/indexFamiliar.css" />
+    <title>Índice Familiar</title>
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+
+        * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #FFF8E1;
+        }
+
+        .index-familiar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #FFF8E1;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 430px;
+            height: 932px;
+            position: relative;
+            background-color: #FFF8E1;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-name {
+            font-size: 32px;
+            font-weight: 600;
+            color: #4A4A4A;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .menu-item {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-container {
+            width: 120px;
+            height: 120px;
+            background-color: rgba(255, 217, 156, 0.65);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+
+        .menu-icon {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .menu-label {
+            color: #4A4A4A;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 480px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .profile-name {
+                white-space: normal;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="index-familiar">
+        <div class="container">
+            <div class="profile-section">
+                <img class="profile-image" src="./IndexFamiliar/Captura de tela 2025-04-13 205732 1.png" />
+                <h1 class="profile-name">Maria Aparecida da Silva</h1>
+            </div>
+
+            <div class="menu-grid">
+                <a href="Agenda.html" class="menu-item">
+                    <div class="icon-container">
+                        <img class="menu-icon" src="./IndexFamiliar/ph_calendar.svg" />
                     </div>
-                </div>
-				</a>
-                <a href="PerfilFamiliar.html">
-					<div class="overlap-wrapper">
-                    <div class="overlap">
-                        <div class="frame"><img class="img" src="./IndexFamiliar/material-symbols_person.svg" /></div>
-                        <div class="text-wrapper-3">Perfil</div>
+                    <div class="menu-label">Agenda</div>
+                </a>
+
+                <a href="PerfilFamiliar.html" class="menu-item">
+                    <div class="icon-container">
+                        <img class="menu-icon" src="./IndexFamiliar/material-symbols_person.svg" />
                     </div>
-                </div>
-				</a>
-                <a href="CofreSenhas.html">
-					<div class="group-2">
-                    <div class="mingcute-lock-line-wrapper">
-                        <img class="mingcute-lock-line" src="./IndexFamiliar/mingcute_lock-line.svg" />
+                    <div class="menu-label">Perfil</div>
+                </a>
+
+                <a href="CofreSenhas.html" class="menu-item">
+                    <div class="icon-container">
+                        <img class="menu-icon" src="./IndexFamiliar/mingcute_lock-line.svg" />
                     </div>
-                    <div class="senhas">Cofre de Senhas</div>
-                </div>
-				</a>
-                <div class="text-wrapper-4">Maria Aparecida da Silva</div>
+                    <div class="menu-label">Cofre de Senhas</div>
+                </a>
+
+                <a href="progresso.html" class="menu-item">
+                    <div class="icon-container">
+                        <img class="menu-icon" src="./IndexFamiliar/tabler_progress.svg" />
+                    </div>
+                    <div class="menu-label">Progresso e Conquistas</div>
+                </a>
             </div>
         </div>
-    </body>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                });
+            });
+        });
+    </script>
+</body>
 </html>

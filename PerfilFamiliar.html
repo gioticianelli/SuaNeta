@@ -1,117 +1,303 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-  	<link rel="stylesheet"  href="./PerfilFamiliar/PerfilFamiliar.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" />
-  	
-  	
-  	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Perfil Familiar</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		body {
+			background-color: #fff8e1;
+			color: #4a4a4a;
+		}
+
+		.perfil-container {
+			max-width: 430px;
+			margin: 0 auto;
+			padding: 20px;
+			position: relative;
+			min-height: 932px;
+		}
+
+		.header {
+			display: flex;
+			align-items: center;
+			margin-bottom: 30px;
+		}
+
+		.back-button {
+			margin-right: 15px;
+			cursor: pointer;
+		}
+
+		.page-title {
+			font-size: 40px;
+			font-weight: 600;
+		}
+
+		.user-profile {
+			display: flex;
+			align-items: center;
+			margin-bottom: 40px;
+			padding: 15px;
+			background-color: rgba(255, 217, 157, 0.2);
+			border-radius: 15px;
+		}
+
+		.profile-pic {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-right: 20px;
+		}
+
+		.user-info {
+			flex: 1;
+		}
+
+		.user-name {
+			font-size: 24px;
+			font-weight: 600;
+			margin-bottom: 5px;
+		}
+
+		.user-relation {
+			font-size: 20px;
+			color: rgba(74, 74, 74, 0.71);
+		}
+
+		.section-title {
+			font-size: 24px;
+			font-weight: 600;
+			color: rgba(0, 0, 0, 0.47);
+			margin: 30px 0 15px 0;
+		}
+
+		.permission-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 15px;
+			background-color: rgba(255, 198, 157, 0.3);
+			border: 1px solid rgba(255, 217, 157, 0.61);
+			margin-bottom: 10px;
+			border-radius: 8px;
+		}
+
+		.permission-text {
+			font-size: 18px;
+		}
+
+		.toggle-switch {
+			position: relative;
+			width: 50px;
+			height: 25px;
+		}
+
+		.toggle-checkbox {
+			display: none;
+		}
+
+		.toggle-slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #666363;
+			border-radius: 25px;
+			transition: .4s;
+		}
+
+		.toggle-slider:before {
+			position: absolute;
+			content: "";
+			height: 20px;
+			width: 20px;
+			left: 3px;
+			bottom: 3px;
+			background-color: white;
+			border-radius: 50%;
+			transition: .4s;
+		}
+
+		.toggle-checkbox:checked+.toggle-slider {
+			background-color: #4CAF50;
+		}
+
+		.toggle-checkbox:checked+.toggle-slider:before {
+			transform: translateX(25px);
+		}
+
+		.footer {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(255, 217, 157, 0.61);
+			padding: 15px 0;
+			display: flex;
+			justify-content: space-around;
+			max-width: 430px;
+			margin: 0 auto;
+		}
+
+		.footer-icon {
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+		}
+	</style>
 </head>
+
 <body>
-  	
-  	<div class="perfil-familiar">
-    		<img class="logo-caixa-41262-1-icon" alt="" src="./PerfilFamiliar/logo-caixa-41262 1.png">
-    		
-    		<div class="perfil">Perfil</div>
-    		<div class="perfil-familiar-child">
-    		</div>
-    		<img class="back-icon" alt="" src="./PerfilFamiliar/back.svg" id="backImage">
-    		
-    		<img class="home-icon" alt="" src="./PerfilFamiliar/material-symbols-light_home-rounded.svg" id="home">
-    		
-    		<div class="neta">Neta</div>
-    		<img class="instagram-post-amarelo-ilustra-icon" alt="" src="./PerfilFamiliar/Instagram_post_amarelo_ilustrado_dia_do_idoso__1_-removebg-preview.svg">
-    		
-    		<div class="ana-clara-silva">Ana Clara Silva </div>
-    		<div class="perfil-familiar-item">
-    		</div>
-    		<div class="alteraes-na-agenda">Alterações na agenda</div>
-    		<div class="perfil-familiar-inner">
-    		</div>
-    		<div class="rectangle-div">
-    		</div>
-    		<div class="perfil-familiar-child1">
-    		</div>
-    		<div class="perfil-familiar-child2">
-    		</div>
-    		<div class="component-10">
-      			<div class="component-10-child">
-      			</div>
-      			<div class="component-10-item">
-      			</div>
-    		</div>
-    		<div class="component-11">
-      			<div class="component-10-child">
-      			</div>
-      			<div class="component-10-item">
-      			</div>
-    		</div>
-    		<div class="component-13">
-      			<div class="component-10-child">
-      			</div>
-      			<div class="component-10-item">
-      			</div>
-    		</div>
-    		<div class="notificaes-em-tempo">Notificações em tempo real</div>
-    		<div class="acesso-ao-perfil">Acesso ao perfil do familiar</div>
-    		<div class="acesso-ao-cofre">Acesso ao cofre de senhas</div>
-    		<div class="acesso-ao-progresso">Acesso ao progresso</div>
-    		<div class="component-12">
-      			<div class="component-10-child">
-      			</div>
-      			<div class="component-12-item">
-      			</div>
-    		</div>
-    		<div class="rectangle-parent" id="groupContainer">
-      			<div class="group-child">
-      			</div>
-      			<img class="group-item" alt="" src="./PerfilFamiliar/Ellipse 5.svg">
-      			
-    		</div>
-    		<div class="rectangle-group" id="groupContainer1">
-      			<div class="group-inner">
-      			</div>
-      			<div class="av">Avó</div>
-      			<img class="instagram-post-amarelo-ilustra-icon1" alt="" src="./PerfilFamiliar/Instagram_post_amarelo_ilustrado_dia_do_idoso__1_-removebg-preview (1).svg">
-      			
-      			<div class="maria-aparecida-da">Maria Aparecida da Silva</div>
-    		</div>
-    		<div class="seu-familiar">Seu familiar</div>
-    		<div class="suas-permies">Suas permições</div>
-  	</div>
-  	
-  	
-  	
-  	
-  	<script>
-    		var backImage = document.getElementById("backImage");
-    		if(backImage) {
-      			backImage.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-    		var home = document.getElementById("home");
-    		if(home) {
-      			home.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-    		var groupContainer = document.getElementById("groupContainer");
-    		if(groupContainer) {
-      			groupContainer.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}
-    		
-    		var groupContainer1 = document.getElementById("groupContainer1");
-    		if(groupContainer1) {
-      			groupContainer1.addEventListener("click", function (e) {
-        				// Add your code here
-      			});
-    		}</script></body>
+	<div class="perfil-container">
+		<div class="header">
+			<img class="back-button" src="./PerfilFamiliar/back.svg" alt="Voltar" onclick="history.back()">
+			<h1 class="page-title">Perfil</h1>
+		</div>
+
+		<div class="user-profile">
+			<img class="profile-pic"
+				src="./PerfilFamiliar/Instagram_post_amarelo_ilustrado_dia_do_idoso__1_-removebg-preview.svg"
+				alt="Foto do familiar">
+			<div class="user-info">
+				<h2 class="user-name">Ana Clara Silva</h2>
+				<p class="user-relation">Neta</p>
+			</div>
+		</div>
+
+		<h3 class="section-title">Seu familiar</h3>
+
+		<div class="user-profile" id="familiarProfile" onclick="toggleFamiliarDetails()">
+			<img class="profile-pic"
+				src="./PerfilFamiliar/Instagram_post_amarelo_ilustrado_dia_do_idoso__1_-removebg-preview (1).svg"
+				alt="Foto do idoso">
+			<div class="user-info">
+				<h2 class="user-name">Maria Aparecida da Silva</h2>
+				<p class="user-relation">Avó</p>
+			</div>
+		</div>
+
+		<h3 class="section-title">Suas permissões</h3>
+
+		<div class="permission-item">
+			<span class="permission-text">Alterações na agenda</span>
+			<label class="toggle-switch">
+				<input type="checkbox" class="toggle-checkbox" checked>
+				<span class="toggle-slider"></span>
+			</label>
+		</div>
+
+		<div class="permission-item">
+			<span class="permission-text">Notificações em tempo real</span>
+			<label class="toggle-switch">
+				<input type="checkbox" class="toggle-checkbox">
+				<span class="toggle-slider"></span>
+			</label>
+		</div>
+
+		<div class="permission-item">
+			<span class="permission-text">Acesso ao perfil do familiar</span>
+			<label class="toggle-switch">
+				<input type="checkbox" class="toggle-checkbox" checked>
+				<span class="toggle-slider"></span>
+			</label>
+		</div>
+
+		<div class="permission-item">
+			<span class="permission-text">Acesso ao cofre de senhas</span>
+			<label class="toggle-switch">
+				<input type="checkbox" class="toggle-checkbox">
+				<span class="toggle-slider"></span>
+			</label>
+		</div>
+
+		<div class="permission-item">
+			<span class="permission-text">Acesso ao progresso</span>
+			<label class="toggle-switch">
+				<input type="checkbox" class="toggle-checkbox" checked>
+				<span class="toggle-slider"></span>
+			</label>
+		</div>
+
+		<div class="footer">
+			<img class="footer-icon" src="./PerfilFamiliar/back.svg" alt="Voltar" onclick="history.back()">
+			<img class="footer-icon" src="./PerfilFamiliar/material-symbols-light_home-rounded.svg" alt="Início"
+				onclick="window.location.href='index.html'">
+		</div>
+	</div>
+
+	<script>
+		class PermissionSystem {
+			// ... (mantenha a classe PermissionSystem EXATAMENTE IGUAL à do outro arquivo)
+		}
+
+		const permissionSystem = new PermissionSystem();
+		let hasControlPermission = false;
+
+		function loadPermissions() {
+			const permissions = permissionSystem.getPermissions();
+			const memberName = document.querySelector(".user-name").textContent;
+			const memberId = memberName.toLowerCase().replace(/\s+/g, '-');
+
+			if (permissions.members[memberId]) {
+				const perms = permissions.members[memberId].permissions;
+
+				// Verifica se tem permissão de controle
+				hasControlPermission = perms.familyControl;
+
+				// Atualiza os toggles (somente leitura se não tiver permissão)
+				document.querySelectorAll('.toggle-checkbox').forEach((checkbox, index) => {
+					checkbox.checked = [
+						perms.agenda,
+						perms.notifications,
+						perms.profileAccess,
+						perms.passwordAccess,
+						perms.progressAccess
+					][index];
+
+					// Desativa a interação se não tiver permissão
+					checkbox.disabled = !hasControlPermission;
+				});
+
+				// Atualiza info do idoso
+				document.querySelector("#familiarProfile .user-name").textContent =
+					permissions.elderProfile.name;
+			}
+		}
+
+		// Bloqueia alterações se não tiver permissão
+		document.querySelectorAll('.toggle-checkbox').forEach(checkbox => {
+			checkbox.addEventListener('click', function (e) {
+				if (!hasControlPermission) {
+					e.preventDefault();
+					alert("Você não tem permissão para alterar configurações. Peça ao idoso para ativar 'Alterações no controle familiar' no seu perfil.");
+					this.checked = !this.checked; // Mantém o estado anterior
+				}
+			});
+		});
+
+		// Carrega as permissões ao abrir
+		document.addEventListener('DOMContentLoaded', loadPermissions);
+
+		// Atualiza quando há mudanças
+		window.addEventListener('storage', (event) => {
+			if (event.key === 'lastUpdate') {
+				loadPermissions();
+			}
+		});
+	</script>
+</body>
+
 </html>
